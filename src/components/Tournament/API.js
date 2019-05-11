@@ -18,13 +18,13 @@ import API_key from "./KEYS";
 //     })
 
 
-function YelpDate ({location}) {
+function YelpDate(location) {
   axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/search?location=${location}`, {
   headers: {
     Authorization: `Bearer ${API_key}`
   },
   params: {
-    location: {location},
+    // location: {location},
     categories: 'lunch',
   }
   })
@@ -35,7 +35,8 @@ function YelpDate ({location}) {
   console.log ('error')
   })    
 }
-   
 
+// console.log(YelpDate())
 
-export default YelpDate;
+export default YelpDate
+

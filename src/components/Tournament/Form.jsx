@@ -14,7 +14,8 @@ class Search extends React.Component {
     handleSubmit(event) {
       event.preventDefault();
       console.log('this.state :', this.state);
-      <YelpDate location ={this.state.search}/>
+      const data = YelpDate( this.state.search)
+      console.log(data);
     }
     render() {
       return (
