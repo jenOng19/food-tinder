@@ -1,62 +1,62 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import yelpFakeApi from '../../data/yelpdata.js';
-import YelpContainer from '../YelpContainer/YelpContainer'
+// import React, { Component } from 'react';
+// import ReactDOM from 'react-dom';
+// import yelpFakeApi from '../../data/yelpdata.js';
+// import YelpContainer from '../YelpContainer/YelpContainer'
 
-class Tournament extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            bracket: null
-        };
-        // this.handleClick=this.handleClick.bind(this);
-    }
+// class Tournament extends Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             bracket: null
+//         };
+//         // this.handleClick=this.handleClick.bind(this);
+//     }
 
-    // handleClick() {
-    // this.setState(state => ({
-    //   isClicked: !state.isClicked   
-    //     }));
-    // }
+//     // handleClick() {
+//     // this.setState(state => ({
+//     //   isClicked: !state.isClicked   
+//     //     }));
+//     // }
 
-    // callApi() {
-    //     this.setState( {bracket: yelpFakeApi.businesses});
-    // }
+//     // callApi() {
+//     //     this.setState( {bracket: yelpFakeApi.businesses});
+//     // }
 
-    componentDidMount() {
-        const getYelpData = yelpFakeApi['businesses'].map( restaurant => {
-            return restaurant
-        });
+//     componentDidMount() {
+//         const getYelpData = yelpFakeApi['businesses'].map( restaurant => {
+//             return restaurant
+//         });
         
-        this.setState({ bracket: getYelpData })
-    }
+//         this.setState({ bracket: getYelpData })
+//     }
 
-    // getFourRestuarantApi() {
+//     // getFourRestuarantApi() {
 
-        //    console.log(this.state.bracket);
-        //    const cutrestaurantData = this.state.bracket.splice(0,4)
-        //    const restaurant = cutrestaurantData.map( restaurant => {
-        //       return (
-        //       <YelpContainer 
-        //                 name={restaurant.name}
-        //                 image={restaurant.image_url}
-        //                 // location={restaurant.coordinates}
-        //                 // rating={restaurant.rating}
-        //                 // keyrestaurant.id   
-        //             />
-        //             )
-        //    })
-    // }
+//         //    console.log(this.state.bracket);
+//         //    const cutrestaurantData = this.state.bracket.splice(0,4)
+//         //    const restaurant = cutrestaurantData.map( restaurant => {
+//         //       return (
+//         //       <YelpContainer 
+//         //                 name={restaurant.name}
+//         //                 image={restaurant.image_url}
+//         //                 // location={restaurant.coordinates}
+//         //                 // rating={restaurant.rating}
+//         //                 // keyrestaurant.id   
+//         //             />
+//         //             )
+//         //    })
+//     // }
 
-    render() {
-        // console.log('render:', this.state.bracket);
-        return (
-            <div>
-                <h1>Tournament Page</h1>
-                <YelpContainer data={this.state.bracket} />
-            </div>
-        )
-        // {/* <YelpContainer data={this.state.bracket} /> */}
-    }
-}
+//     render() {
+//         // console.log('render:', this.state.bracket);
+//         return (
+//             <div>
+//                 <h1>Tournament Page</h1>
+//                 <YelpContainer data={this.state.bracket} />
+//             </div>
+//         )
+//         // {/* <YelpContainer data={this.state.bracket} /> */}
+//     }
+// }
 
-export default Tournament
+// export default Tournament

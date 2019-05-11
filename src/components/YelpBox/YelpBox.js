@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+// import React, {Component} from 'react';
 
-class Yelp extends Component{
-    constructor(props){
-        super(props);
-        this.state={
+// class Yelp extends Component{
+//     constructor(props){
+//         super(props);
+//         this.state={
             
-        }
-    }
-}
+//         }
+//     }
+// }
