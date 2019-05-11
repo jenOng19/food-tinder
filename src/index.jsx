@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 // import Header from './components/layout/Header';
 // import Search from './components/layout/Search';
 // import Tournament from './components/Tournament/Tournament.jsx';
-import yelp_date from './components/Tournament/API';
+import Search from './components/Tournament/Form';
 
 // class App extends Component {
 //     constructor(props){
@@ -22,14 +22,8 @@ import yelp_date from './components/Tournament/API';
 //     }
 
 // }
-const API = (
-    <p>yelp_date</p>
-)
-
 
 ReactDOM.render(
-    <API />,
+    <Search />,
     document.getElementById('root')
 )
-
-export default App;
