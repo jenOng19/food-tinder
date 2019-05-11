@@ -1,0 +1,3 @@
+let API_key = 'Y4noU6PPXhBRFrqRgmv-bnpO09SHmLhp9vUbmbrOJlak2Wy9MvFj7i3elJbFn4l9UX82yo9E6iTIXUvLdIaEieEGW2Ok3RBuGip8HueeUcjX2Uw63k3nydopXDLHXHYx';
+
+export default API_key;
