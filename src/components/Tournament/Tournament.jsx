@@ -51,7 +51,9 @@ class Tournament extends Component {
         // console.log('render:', this.state.bracket);
         return (
             <div>
-                <h1>Tournament Page</h1>
+                <div className="tournamentHeader">
+                    <h1>Tournament</h1>
+                </div>
                 <YelpContainer data={this.state.bracket} />
             </div>
         )
