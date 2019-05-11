@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-// import './yelp.css'
+
 
 class YelpContainer extends Component{
     constructor(props){
