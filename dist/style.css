@@ -36,7 +36,7 @@
     height: 77%;
     width: 100%;
     background-color: pink;
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg);
+    /* background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg); */
     background-size: cover;
 
 }

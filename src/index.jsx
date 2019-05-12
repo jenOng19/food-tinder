@@ -2,8 +2,9 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 // import Header from './components/layout/Header';
 // import Search from './components/layout/Search';
-// import Tournament from './components/Tournament/Tournament.jsx';
+// import YelpContainer from './components/yelpContainer/YelpContainer';
 import Search from './components/Tournament/Form';
+import '../src/components/YelpContainer/yelp.css'
 
 // class App extends Component {
 //     constructor(props){

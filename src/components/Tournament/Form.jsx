@@ -1,12 +1,47 @@
 import React from "react";
-import YelpDate from "./API";
+import axios from "axios";
+import API_key from "./KEYS";
+import YelpContainer from "../YelpContainer/YelpContainer";
 
 class Search extends React.Component {
     constructor(props) {
       super(props);
-      this.state = { search: '' };
+      this.state = { search: '', yelp: [] };
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    getYelpData () {
+      this.yelpDate(this.state.search);
+    }
+    yelpDate (location) {
+      axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/search?location=${location}`, {
+      headers: {
+        Authorization: `Bearer ${API_key}`
+      },
+      params: {
+        categories: 'lunch',
+      }
+      })
+      .then((res) => {
+        console.log(res.data.businesses);
+        this.setState({yelp: res.data.businesses})
+      })
+      .catch((err) => {
+        console.log ('error')
+      })  
+    }   
+    renderYelpData () {
+      const yelpData = this.state.yelp.map( business => {
+        console.log('business :', business);
+        // return <p key={business.id}>{business.name}</p>
+        return <YelpContainer name={business.name}
+                              image={business.image_url}
+                              key={business.name}
+                              rating={business.rating}
+                              price={business.price}        
+              />
+      })
+      return yelpData;
     }
     handleChange(event) {
       this.setState({ search: event.target.value });
@@ -14,8 +49,8 @@ class Search extends React.Component {
     handleSubmit(event) {
       event.preventDefault();
       console.log('this.state :', this.state);
-      const data = YelpDate( this.state.search)
-      console.log(data);
+      this.getYelpData();
+      this.renderYelpData();
     }
     render() {
       return (
@@ -24,7 +59,7 @@ class Search extends React.Component {
             search :
             <input type="text" value={this.state.search} onChange={this.handleChange} />
             <input type="submit" value="Submit" onSubmit={this.handleSubmit}/>
-            {/* <p>{JSON.parse(yelp_date)}</p> */}
+            <div>{this.state.yelp? this.renderYelpData():'loading'}</div>
           </label>
         </form>
       );

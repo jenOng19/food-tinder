@@ -1,46 +1,33 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
+import './yelp.css' 
 
+let style = {
+    width: "200px",
+    height: "200px"
+}
 
-
-class YelpContainer extends Component{
-    constructor(props){
-        super(props);
-        
-    }
-
-    handleRender(){
-        
-    }
-
-    render(){
-        
-        return(
-            <div>   
-                <div className ="yelpContainer">
-                    <div className="silver yelpInside">
-                        <div className="imgContainer"></div>
-                        <div className="yelpInfo">
-                            <div className="name">Name</div>
-                            <div className="reviews">Review</div>
-                            <div className="price">Price</div>
-                        </div>
+function YelpContainer ({name,image,rating,price}) {
+    return(
+        <div>   
+            <div className ="yelpContainer">
+                <div className="silver yelpInside">
+                    <div className="imgContainer">
+                        <img src={image} alt={name} className="yelp-img" style={style}/>
                     </div>
-                </div> 
-                <div className="yelpContainer">
-                    <div className="silver yelpInside">
-                        <div className="imgContainer"></div>
-                        <div className="yelpInfo">
-                            <div className="name">Name</div>
-                            <div className="reviews">Review</div>
-                            <div className="price">Price</div>
-                        </div>
+                    <div className="yelpInfo">
+                        {/* <div className="name">Name</div> */}
+                        <p className="yelp-name">{name}</p>
+                        {/* <div className="reviews">Review</div> */}
+                        <p className="yelp-reviews">Rating: {rating}</p>
+                        {/* <div className="price">Price</div> */}
+                        <p className="yelp-price">Price: {price}</p>
                     </div>
                 </div>
-            </div>
-        )
-    }
+            </div> 
+        </div>
+    )
 }
+
 // props = <YelpBox name={restaurant.name} 
 // image={restaurant.image_url}
 // location={restaurant.coordinates}
