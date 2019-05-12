@@ -1,6 +1,6 @@
 // import React, { Component } from 'react';
 // import ReactDOM from 'react-dom';
-// import yelpFakeApi from '../../data/yelpdata.js';
+// // import yelpFakeApi from '../../data/yelpdata.js';
 // import YelpContainer from '../YelpContainer/YelpContainer'
 
 // class Tournament extends Component {
@@ -22,13 +22,13 @@
 //     //     this.setState( {bracket: yelpFakeApi.businesses});
 //     // }
 
-//     componentDidMount() {
-//         const getYelpData = yelpFakeApi['businesses'].map( restaurant => {
-//             return restaurant
-//         });
+//     // componentDidMount() {
+//     //     const getYelpData = yelpFakeApi['businesses'].map( restaurant => {
+//     //         return restaurant
+//     //     });
         
-//         this.setState({ bracket: getYelpData })
-//     }
+//     //     this.setState({ bracket: getYelpData })
+//     // }
 
 //     // getFourRestuarantApi() {
 
@@ -51,7 +51,9 @@
 //         // console.log('render:', this.state.bracket);
 //         return (
 //             <div>
-//                 <h1>Tournament Page</h1>
+//                 <div className="tournamentHeader">
+//                     <h1>Tournament</h1>
+//                 </div>
 //                 <YelpContainer data={this.state.bracket} />
 //             </div>
 //         )
@@ -59,4 +61,4 @@
 //     }
 // }
 
-// export default Tournament
+// export default Tournament;

@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import API_key from "./KEYS";
+import YelpContainer from "../YelpContainer/YelpContainer";
 
 class Search extends React.Component {
     constructor(props) {
@@ -32,7 +33,13 @@ class Search extends React.Component {
     renderYelpData () {
       const yelpData = this.state.yelp.map( business => {
         console.log('business :', business);
-        return <p key={business.id}>{business.name}</p>
+        // return <p key={business.id}>{business.name}</p>
+        return <YelpContainer name={business.name}
+                              image={business.image_url}
+                              key={business.name}
+                              rating={business.rating}
+                              price={business.price}        
+              />
       })
       return yelpData;
     }
@@ -52,7 +59,7 @@ class Search extends React.Component {
             search :
             <input type="text" value={this.state.search} onChange={this.handleChange} />
             <input type="submit" value="Submit" onSubmit={this.handleSubmit}/>
-            <div className='yelp'>{this.renderYelpData()}</div>
+            <div>{this.state.yelp? this.renderYelpData():'loading'}</div>
           </label>
         </form>
       );

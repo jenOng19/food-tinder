@@ -1,0 +1,45 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+
+.tournamentHeader{
+    height: 12vh;
+    text-align: center;
+    position: relative;
+}
+
+.tournamentHeader > h1{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.silver{
+    background-color: silver;
+}
+
+.yelpContainer{
+    height: 44vh;
+    width: 100%;
+    padding-bottom:10px;
+}
+
+.yelpInside{
+    height: 100%;
+    width:  100%
+}
+
+
+.imgContainer{
+    height: 77%;
+    width: 100%;
+    background-color: pink;
+    /* background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg); */
+    background-size: cover;
+
+}
+
+
+

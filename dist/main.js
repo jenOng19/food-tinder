@@ -9257,6 +9257,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _KEYS__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./KEYS */ "./src/components/Tournament/KEYS.js");
+/* harmony import */ var _YelpContainer_YelpContainer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../YelpContainer/YelpContainer */ "./src/components/YelpContainer/YelpContainer.jsx");
+
 
 
 
@@ -9296,10 +9298,15 @@ class Search extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
 
   renderYelpData() {
     const yelpData = this.state.yelp.map(business => {
-      console.log('business :', business);
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        key: business.id
-      }, business.name);
+      console.log('business :', business); // return <p key={business.id}>{business.name}</p>
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_YelpContainer_YelpContainer__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        name: business.name,
+        image: business.image_url,
+        key: business.name,
+        rating: business.rating,
+        price: business.price
+      });
     });
     return yelpData;
   }
@@ -9328,9 +9335,7 @@ class Search extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       type: "submit",
       value: "Submit",
       onSubmit: this.handleSubmit
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "yelp"
-    }, this.renderYelpData())));
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.yelp ? this.renderYelpData() : 'loading')));
   }
 
 }
@@ -9353,6 +9358,105 @@ let API_key = 'Y4noU6PPXhBRFrqRgmv-bnpO09SHmLhp9vUbmbrOJlak2Wy9MvFj7i3elJbFn4l9U
 
 /***/ }),
 
+/***/ "./src/components/YelpContainer/YelpContainer.jsx":
+/*!********************************************************!*\
+  !*** ./src/components/YelpContainer/YelpContainer.jsx ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _yelp_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./yelp.css */ "./src/components/YelpContainer/yelp.css");
+/* harmony import */ var _yelp_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_yelp_css__WEBPACK_IMPORTED_MODULE_1__);
+
+
+let style = {
+  width: "200px",
+  height: "200px"
+};
+
+function YelpContainer({
+  name,
+  image,
+  rating,
+  price
+}) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "yelpContainer"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "silver yelpInside"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "imgContainer"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: image,
+    alt: name,
+    className: "yelp-img",
+    style: style
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "yelpInfo"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "yelp-name"
+  }, name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "yelp-reviews"
+  }, "Rating: ", rating), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "yelp-price"
+  }, "Price: ", price)))));
+} // props = <YelpBox name={restaurant.name} 
+// image={restaurant.image_url}
+// location={restaurant.coordinates}
+// rating={restaurant.rating}
+// key={restaurant.id}
+// function YelpContainer (props){
+//     console.log(props)
+//     return (
+//         <div className = "yelpimg">
+//         <YelpImg img={image} alt={name}/>
+//         </div>
+//     )
+// };
+// function YelpImg (image, name) {
+//     return <img src ={image} alt={name} />
+// }
+// function YelpImg(){
+//     const styling={
+//         backgroundColor: 'yellow',
+//     }
+//     const element=(
+//         <div className="yelp" style={styling}>
+//         </div>
+//     )
+//     ReactDOM.render(
+//         element,
+//         document.getElementById('root')
+//     )
+// }
+// ReactDOM.render(
+//     <YelpImg />,
+//     document.getElementById('root')
+// )
+
+
+/* harmony default export */ __webpack_exports__["default"] = (YelpContainer);
+
+/***/ }),
+
+/***/ "./src/components/YelpContainer/yelp.css":
+/*!***********************************************!*\
+  !*** ./src/components/YelpContainer/yelp.css ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* .yelp-img{
+    height: 50px;
+    width: 50px;
+} */
+
+/***/ }),
+
 /***/ "./src/index.jsx":
 /*!***********************!*\
   !*** ./src/index.jsx ***!
@@ -9367,10 +9471,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_Tournament_Form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Tournament/Form */ "./src/components/Tournament/Form.jsx");
+/* harmony import */ var _src_components_YelpContainer_yelp_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../src/components/YelpContainer/yelp.css */ "./src/components/YelpContainer/yelp.css");
+/* harmony import */ var _src_components_YelpContainer_yelp_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_src_components_YelpContainer_yelp_css__WEBPACK_IMPORTED_MODULE_3__);
 
  // import Header from './components/layout/Header';
 // import Search from './components/layout/Search';
-// import Tournament from './components/Tournament/Tournament.jsx';
+// import YelpContainer from './components/yelpContainer/YelpContainer';
+
 
  // class App extends Component {
 //     constructor(props){
