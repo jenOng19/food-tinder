@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import axios from "axios";
 import API_key from "./KEYS";
 import YelpContainer from "../YelpContainer/YelpContainer";
+import './game.css'
 
 class Search extends Component {
     constructor(props) {
@@ -74,7 +75,7 @@ class Search extends Component {
           <label>
             search :
             <input type="text" value={this.state.search} onChange={this.handleChange} />
-            <input type="submit" value="Submit" onSubmit={this.handleSubmit}/>
+            <input className='red' type="submit" value="Submit" onSubmit={this.handleSubmit}/>
             <div>{this.state.yelp ? this.renderYelpData():'loading'}</div>
           </label>
         </form>
