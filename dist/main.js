@@ -9268,10 +9268,12 @@ class Search extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
     super(props);
     this.state = {
       search: '',
-      yelp: []
+      yelp: [],
+      bracket: []
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.clickHandler = this.clickHandler.bind(this);
   }
 
   getYelpData() {
@@ -9287,7 +9289,6 @@ class Search extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
         categories: 'lunch'
       }
     }).then(res => {
-      console.log(res.data.businesses);
       this.setState({
         yelp: res.data.businesses
       });
@@ -9296,19 +9297,32 @@ class Search extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
     });
   }
 
-  renderYelpData() {
-    const yelpData = this.state.yelp.map(business => {
-      console.log('business :', business); // return <p key={business.id}>{business.name}</p>
+  clickHandler(id) {
+    const chosenOne = this.state.yelp.findIndex(restaurant => {
+      return restaurant.id === id;
+    });
+    const updatedYelp = this.state.yelp.slice(2, this.state.yelp.length);
+    this.setState({
+      yelp: updatedYelp,
+      bracket: [...this.state.bracket, this.state.yelp[chosenOne]]
+    }, () => console.log(this.state.bracket));
+  }
 
+  renderYelpData() {
+    const yelpData = [...this.state.yelp];
+    const bracket = yelpData.slice(0, 2);
+    const yelpBracket = bracket.map(business => {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_YelpContainer_YelpContainer__WEBPACK_IMPORTED_MODULE_3__["default"], {
         name: business.name,
         image: business.image_url,
         key: business.name,
+        id: business.id,
         rating: business.rating,
-        price: business.price
+        price: business.price,
+        click: this.clickHandler
       });
     });
-    return yelpData;
+    return yelpBracket;
   }
 
   handleChange(event) {
@@ -9319,7 +9333,6 @@ class Search extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log('this.state :', this.state);
     this.getYelpData();
     this.renderYelpData();
   }
@@ -9378,66 +9391,50 @@ let style = {
   height: "200px"
 };
 
-function YelpContainer({
-  name,
-  image,
-  rating,
-  price
-}) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "yelpContainer"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "silver yelpInside"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "imgContainer"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: image,
-    alt: name,
-    className: "yelp-img",
-    style: style
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "yelpInfo"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "yelp-name"
-  }, name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "yelp-reviews"
-  }, "Rating: ", rating), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "yelp-price"
-  }, "Price: ", price)))));
-} // props = <YelpBox name={restaurant.name} 
-// image={restaurant.image_url}
-// location={restaurant.coordinates}
-// rating={restaurant.rating}
-// key={restaurant.id}
-// function YelpContainer (props){
-//     console.log(props)
-//     return (
-//         <div className = "yelpimg">
-//         <YelpImg img={image} alt={name}/>
-//         </div>
-//     )
-// };
-// function YelpImg (image, name) {
-//     return <img src ={image} alt={name} />
-// }
-// function YelpImg(){
-//     const styling={
-//         backgroundColor: 'yellow',
-//     }
-//     const element=(
-//         <div className="yelp" style={styling}>
-//         </div>
-//     )
-//     ReactDOM.render(
-//         element,
-//         document.getElementById('root')
-//     )
-// }
-// ReactDOM.render(
-//     <YelpImg />,
-//     document.getElementById('root')
-// )
+class YelpContainer extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+    this.clickHandler = this.clickHandler.bind(this);
+  }
 
+  clickHandler() {
+    console.log(this.props.id);
+    this.props.click(this.props.id);
+  } // {name,image,rating,price}) 
+
+
+  render() {
+    const {
+      name,
+      image,
+      rating,
+      price
+    } = this.props;
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      onClick: this.clickHandler
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "yelpContainer"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "silver yelpInside"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "imgContainer"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: image,
+      alt: name,
+      className: "yelp-img",
+      style: style
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "yelpInfo"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "yelp-name"
+    }, name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "yelp-reviews"
+    }, "Rating: ", rating), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "yelp-price"
+    }, "Price: ", price)))));
+  }
+
+}
 
 /* harmony default export */ __webpack_exports__["default"] = (YelpContainer);
 
