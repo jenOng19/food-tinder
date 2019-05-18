@@ -1706,7 +1706,7 @@ module.exports = {
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".random-button{\n    background-color: slategray;\n    padding:5px;\n    border-radius: 5px;\n    border: 2px solid gray\n}\n\n.hide{\n    display: none;\n}", ""]);
 
 
 
@@ -9955,11 +9955,13 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       search: '',
       filter: '',
       yelp: [],
-      bracket: []
+      bracket: [] // twoChoices:[]
+
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.clickHandler = this.clickHandler.bind(this);
+    this.handleRandomPick = this.handleRandomPick.bind(this);
   }
 
   getYelpData() {
@@ -9981,6 +9983,14 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     }).catch(err => {
       console.log('error');
     });
+  }
+
+  handleRandomPick() {
+    const yelpData = [...this.state.yelp];
+    const bracket = yelpData.slice(0, 2);
+    console.log('bracket', bracket);
+    const pick = Math.floor(Math.random() * 2);
+    this.clickHandler(bracket[pick].id);
   }
 
   clickHandler(id) {
@@ -10034,7 +10044,10 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       type: "submit",
       value: "Submit",
       onSubmit: this.handleSubmit
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.yelp ? this.renderYelpData() : 'loading'))));
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.yelp ? this.renderYelpData() : 'loading'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: this.state.yelp.length >= 1 ? 'random-button' : 'hide',
+      onClick: this.handleRandomPick
+    }, "Pick for Me!"));
   }
 
 }
@@ -10052,7 +10065,8 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-let API_key = 'Y4noU6PPXhBRFrqRgmv-bnpO09SHmLhp9vUbmbrOJlak2Wy9MvFj7i3elJbFn4l9UX82yo9E6iTIXUvLdIaEieEGW2Ok3RBuGip8HueeUcjX2Uw63k3nydopXDLHXHYx';
+let API_key = 'xNeotD9tXeETUfPpNuEbideztro4aK18Kh8IcerVAD54yGmkRg-PZdYhlBQPzgDg8SuyJJPVp__6Zw73QyvLp2OgmaaTap_Rc1Z7EX3ylcLFHhRiHzNBFNhPdo6_XHYx'; //kate's :'Y4noU6PPXhBRFrqRgmv-bnpO09SHmLhp9vUbmbrOJlak2Wy9MvFj7i3elJbFn4l9UX82yo9E6iTIXUvLdIaEieEGW2Ok3RBuGip8HueeUcjX2Uw63k3nydopXDLHXHYx';
+
 /* harmony default export */ __webpack_exports__["default"] = (API_key);
 
 /***/ }),
