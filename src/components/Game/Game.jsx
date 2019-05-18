@@ -11,8 +11,10 @@ class Game extends Component {
         search: '', 
         filter: '',
         yelp: [],
-        bracket: []
+        bracket: [],
+        round: 0
       };
+      this.limit = null;
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
       this.clickHandler = this.clickHandler.bind( this );
@@ -20,6 +22,7 @@ class Game extends Component {
     getYelpData () {
       this.yelpDate(this.state.search);
     }
+
     yelpDate (location) {
       axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/search?location=${location}`, {
       headers: {
@@ -27,10 +30,17 @@ class Game extends Component {
       },
       params: {
         categories: 'lunch',
+        // 8 , 16 , 32 bracket
+        limit: 16
       }
       })
       .then((res) => {
-        this.setState({yelp: res.data.businesses})
+        this.setState({
+          yelp: res.data.businesses,
+          round: this.state.round + 1
+        }, () => {
+          this.limit = this.state.yelp.length / 2
+        })
       })
       .catch((err) => {
         console.log ('error')
@@ -44,7 +54,25 @@ class Game extends Component {
       const updatedYelp = this.state.yelp.slice( 2 , this.state.yelp.length );
       this.setState({ 
         yelp: updatedYelp,
-        bracket: [...this.state.bracket, this.state.yelp[chosenOne]]}, () => console.log(this.state.bracket))
+        bracket: [...this.state.bracket, this.state.yelp[chosenOne]]
+      }, this.nextRound );
+    }
+
+    nextRound() {
+      console.log( this.state )
+      if ( this.state.bracket.length === this.limit ) 
+        return ( this.state.bracket.length === 1 && this.state.yelp.length === 0) 
+          ? this.setState( {
+            yelp: [...this.state.bracket ],
+            bracket: [],
+            round: 'Winner'} )
+          : this.setState( {
+            yelp: [...this.state.bracket ],
+            bracket: [],
+            round: this.state.round + 1}, () => {
+            this.limit = this.state.yelp.length / 2
+          })
+      
     }
 
     renderYelpData () {
@@ -72,17 +100,15 @@ class Game extends Component {
     }
     render() {
       return (
-        <div>
           <form onSubmit={this.handleSubmit}>
             <label>
               search :
               <input type="text" value={this.state.search} onChange={this.handleChange} />
               <input type="submit" value="Submit" onSubmit={this.handleSubmit}/>
+              { (this.state.yelp.length > 0) ? <h1>Round: {this.state.round}</h1> : null}
               <div>{this.state.yelp ? this.renderYelpData():'loading'}</div>
             </label>
           </form>
-        </div>
-        
       );
     }
   }
