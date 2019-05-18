@@ -1,26 +1,23 @@
 import React, {Component} from 'react';
-import './yelp.css' 
 
 let style = {
     width: "200px",
     height: "200px"
 }
 
-function YelpContainer ({name,image,rating,price}) {
+function YelpContainer (props) {
     return(
         <div>   
             <div className ="yelpContainer">
                 <div className="silver yelpInside">
                     <div className="imgContainer">
-                        <img src={image} alt={name} className="yelp-img" style={style}/>
+                        <img src={props.image} alt={props.name} className="yelp-img" style={style}/>
                     </div>
                     <div className="yelpInfo">
-                        {/* <div className="name">Name</div> */}
-                        <p className="yelp-name">{name}</p>
-                        {/* <div className="reviews">Review</div> */}
-                        <p className="yelp-reviews">Rating: {rating}</p>
-                        {/* <div className="price">Price</div> */}
-                        <p className="yelp-price">Price: {price}</p>
+                        <p className="yelp-name">{props.name}</p>
+                        <p className="yelp-reviews">Rating: {props.rating}</p>
+                        <p className="yelp-price">Price:{props.price}</p>
+                        <button onClick={()=>props.chosen(props.id)}>Choose</button>
                     </div>
                 </div>
             </div> 
@@ -28,6 +25,7 @@ function YelpContainer ({name,image,rating,price}) {
     )
 }
 
+// {name,image,rating,price}
 // props = <YelpBox name={restaurant.name} 
 // image={restaurant.image_url}
 // location={restaurant.coordinates}

@@ -1,12 +1,16 @@
-import React from "react";
+import React, {Component} from "react";
 import axios from "axios";
 import API_key from "./KEYS";
 import YelpContainer from "../YelpContainer/YelpContainer";
 
-class Search extends React.Component {
+class Search extends Component {
     constructor(props) {
       super(props);
-      this.state = { search: '', yelp: [] };
+      this.state = { 
+        search: '', 
+        yelp: [],
+        chosen:[]
+      };
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -30,16 +34,27 @@ class Search extends React.Component {
         console.log ('error')
       })  
     }   
+
+    chosen(food){
+      const{chosen}=this.state;
+      
+      this.setState({...chosen, food})
+    }
+
     renderYelpData () {
+      // const chosen={...this.state.yelp};
       const yelpData = this.state.yelp.map( business => {
         console.log('business :', business);
+        // for(var food=0; food<2;food++){
         // return <p key={business.id}>{business.name}</p>
         return <YelpContainer name={business.name}
                               image={business.image_url}
                               key={business.name}
                               rating={business.rating}
-                              price={business.price}        
+                              price={business.price}
+                              chosen={this.chosen}        
               />
+        // }
       })
       return yelpData;
     }
@@ -59,7 +74,7 @@ class Search extends React.Component {
             search :
             <input type="text" value={this.state.search} onChange={this.handleChange} />
             <input type="submit" value="Submit" onSubmit={this.handleSubmit}/>
-            <div>{this.state.yelp? this.renderYelpData():'loading'}</div>
+            <div>{this.state.yelp ? this.renderYelpData():'loading'}</div>
           </label>
         </form>
       );
