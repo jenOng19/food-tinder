@@ -1,8 +1,8 @@
-import React, {Component} from "react";
-import axios from "axios";
-import API_key from "./KEYS";
-import YelpContainer from "../YelpContainer/YelpContainer";
-import './Game.css';
+import React, {Component} from "./node_modules/react";
+import axios from "./node_modules/axios";
+import API_key from "./keys";
+import YelpContainer from "../yelp-container/yelp-container";
+import './game.css';
 
 class Game extends Component {
     constructor(props) {

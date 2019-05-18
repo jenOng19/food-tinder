@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import '../src/components/YelpContainer/yelp.css'
+import App from './app';
+import './components/yelp-container/yelp.css'
 
 
 ReactDOM.render(
