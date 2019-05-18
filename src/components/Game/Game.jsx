@@ -1,5 +1,5 @@
-import React, {Component} from "./node_modules/react";
-import axios from "./node_modules/axios";
+import React, {Component} from "react";
+import axios from "axios";
 import API_key from "./keys";
 import YelpContainer from "../yelp-container/yelp-container";
 import './game.css';
@@ -9,6 +9,7 @@ class Game extends Component {
       super(props);
       this.state = { 
         search: '', 
+        filter: '',
         yelp: [],
         bracket: []
       };
@@ -71,14 +72,17 @@ class Game extends Component {
     }
     render() {
       return (
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            search :
-            <input type="text" value={this.state.search} onChange={this.handleChange} />
-            <input type="submit" value="Submit" onSubmit={this.handleSubmit}/>
-            <div>{this.state.yelp ? this.renderYelpData():'loading'}</div>
-          </label>
-        </form>
+        <div>
+          <form onSubmit={this.handleSubmit}>
+            <label>
+              search :
+              <input type="text" value={this.state.search} onChange={this.handleChange} />
+              <input type="submit" value="Submit" onSubmit={this.handleSubmit}/>
+              <div>{this.state.yelp ? this.renderYelpData():'loading'}</div>
+            </label>
+          </form>
+        </div>
+        
       );
     }
   }
