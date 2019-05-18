@@ -1,13 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-// import Header from './components/layout/Header';
-// import Search from './components/layout/Search';
-// import YelpContainer from './components/yelpContainer/YelpContainer';
-import Search from './components/Game/Game';
+import App from './App';
 import '../src/components/YelpContainer/yelp.css'
 
 
 ReactDOM.render(
-    <Search />,
-    document.getElementById('root')
+	<App />,
+	document.getElementById('root')
 )

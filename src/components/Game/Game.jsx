@@ -2,8 +2,9 @@ import React, {Component} from "react";
 import axios from "axios";
 import API_key from "./KEYS";
 import YelpContainer from "../YelpContainer/YelpContainer";
+import './Game.css';
 
-class Search extends Component {
+class Game extends Component {
     constructor(props) {
       super(props);
       this.state = { 
@@ -82,5 +83,5 @@ class Search extends Component {
     }
   }
 
-export default Search;
+export default Game;
   
