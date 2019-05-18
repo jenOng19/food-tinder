@@ -9269,10 +9269,15 @@ class Search extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     this.state = {
       search: '',
       yelp: [],
+<<<<<<< HEAD
       chosen: []
+=======
+      bracket: []
+>>>>>>> e0ae774c4140c5c63162de2f4019ee0bc31972e8
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.clickHandler = this.clickHandler.bind(this);
   }
 
   getYelpData() {
@@ -9288,7 +9293,6 @@ class Search extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         categories: 'lunch'
       }
     }).then(res => {
-      console.log(res.data.businesses);
       this.setState({
         yelp: res.data.businesses
       });
@@ -9297,6 +9301,7 @@ class Search extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
   }
 
+<<<<<<< HEAD
   chosen(food) {
     const {
       chosen
@@ -9311,17 +9316,39 @@ class Search extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     const yelpData = this.state.yelp.map(business => {
       console.log('business :', business); // for(var food=0; food<2;food++){
       // return <p key={business.id}>{business.name}</p>
+=======
+  clickHandler(id) {
+    const chosenOne = this.state.yelp.findIndex(restaurant => {
+      return restaurant.id === id;
+    });
+    const updatedYelp = this.state.yelp.slice(2, this.state.yelp.length);
+    this.setState({
+      yelp: updatedYelp,
+      bracket: [...this.state.bracket, this.state.yelp[chosenOne]]
+    }, () => console.log(this.state.bracket));
+  }
+>>>>>>> e0ae774c4140c5c63162de2f4019ee0bc31972e8
 
+  renderYelpData() {
+    const yelpData = [...this.state.yelp];
+    const bracket = yelpData.slice(0, 2);
+    const yelpBracket = bracket.map(business => {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_YelpContainer_YelpContainer__WEBPACK_IMPORTED_MODULE_3__["default"], {
         name: business.name,
         image: business.image_url,
         key: business.name,
+        id: business.id,
         rating: business.rating,
         price: business.price,
+<<<<<<< HEAD
         chosen: this.chosen
       }); // }
+=======
+        click: this.clickHandler
+      });
+>>>>>>> e0ae774c4140c5c63162de2f4019ee0bc31972e8
     });
-    return yelpData;
+    return yelpBracket;
   }
 
   handleChange(event) {
@@ -9332,7 +9359,6 @@ class Search extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log('this.state :', this.state);
     this.getYelpData();
     this.renderYelpData();
   }
@@ -9388,6 +9414,7 @@ let style = {
   height: "200px"
 };
 
+<<<<<<< HEAD
 function YelpContainer(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "yelpContainer"
@@ -9445,7 +9472,52 @@ function YelpContainer(props) {
 //     <YelpImg />,
 //     document.getElementById('root')
 // )
+=======
+class YelpContainer extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+    this.clickHandler = this.clickHandler.bind(this);
+  }
 
+  clickHandler() {
+    console.log(this.props.id);
+    this.props.click(this.props.id);
+  } // {name,image,rating,price}) 
+
+>>>>>>> e0ae774c4140c5c63162de2f4019ee0bc31972e8
+
+  render() {
+    const {
+      name,
+      image,
+      rating,
+      price
+    } = this.props;
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      onClick: this.clickHandler
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "yelpContainer"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "silver yelpInside"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "imgContainer"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: image,
+      alt: name,
+      className: "yelp-img",
+      style: style
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "yelpInfo"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "yelp-name"
+    }, name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "yelp-reviews"
+    }, "Rating: ", rating), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "yelp-price"
+    }, "Price: ", price)))));
+  }
+
+}
 
 /* harmony default export */ __webpack_exports__["default"] = (YelpContainer);
 

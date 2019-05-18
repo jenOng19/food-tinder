@@ -9,10 +9,11 @@ class Search extends Component {
       this.state = { 
         search: '', 
         yelp: [],
-        chosen:[]
+        bracket: []
       };
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
+      this.clickHandler = this.clickHandler.bind( this );
     }
     getYelpData () {
       this.yelpDate(this.state.search);
@@ -27,7 +28,6 @@ class Search extends Component {
       }
       })
       .then((res) => {
-        console.log(res.data.businesses);
         this.setState({yelp: res.data.businesses})
       })
       .catch((err) => {
@@ -35,35 +35,36 @@ class Search extends Component {
       })  
     }   
 
-    chosen(food){
-      const{chosen}=this.state;
-      
-      this.setState({...chosen, food})
+    clickHandler( id ) {
+      const chosenOne = this.state.yelp.findIndex( restaurant => {
+        return restaurant.id === id;
+      })
+      const updatedYelp = this.state.yelp.slice( 2 , this.state.yelp.length );
+      this.setState({ 
+        yelp: updatedYelp,
+        bracket: [...this.state.bracket, this.state.yelp[chosenOne]]}, () => console.log(this.state.bracket))
     }
 
     renderYelpData () {
-      // const chosen={...this.state.yelp};
-      const yelpData = this.state.yelp.map( business => {
-        console.log('business :', business);
-        // for(var food=0; food<2;food++){
-        // return <p key={business.id}>{business.name}</p>
+      const yelpData = [...this.state.yelp];
+      const bracket = yelpData.slice(0 , 2)
+      const yelpBracket = bracket.map( business => {
         return <YelpContainer name={business.name}
                               image={business.image_url}
                               key={business.name}
+                              id={ business.id}
                               rating={business.rating}
-                              price={business.price}
-                              chosen={this.chosen}        
+                              price={business.price} 
+                              click={ this.clickHandler }   
               />
-        // }
       })
-      return yelpData;
+      return yelpBracket;
     }
     handleChange(event) {
       this.setState({ search: event.target.value });
     }
     handleSubmit(event) {
       event.preventDefault();
-      console.log('this.state :', this.state);
       this.getYelpData();
       this.renderYelpData();
     }

@@ -6,23 +6,6 @@ import ReactDOM from 'react-dom';
 import Search from './components/Game/Game';
 import '../src/components/YelpContainer/yelp.css'
 
-// class App extends Component {
-//     constructor(props){
-//         super(props);
-//         this.state = null;
-//     }
-    
-//     render(){
-//         return(
-//             <div className="page">
-//                 {/* <Header />
-//                 <Search />  */}
-//                 <Tournament />
-//             </div>
-//         )
-//     }
-
-// }
 
 ReactDOM.render(
     <Search />,
