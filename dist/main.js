@@ -1697,9 +1697,9 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/components/Game/Game.css":
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/components/game/game.css":
 /*!****************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/components/Game/Game.css ***!
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/components/game/game.css ***!
   \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -1712,10 +1712,10 @@ exports.push([module.i, "", ""]);
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/components/YelpContainer/yelp.css":
-/*!*************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/components/YelpContainer/yelp.css ***!
-  \*************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/components/yelp-container/yelp.css":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/components/yelp-container/yelp.css ***!
+  \**************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9872,9 +9872,9 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "./src/App.jsx":
+/***/ "./src/app.jsx":
 /*!*********************!*\
-  !*** ./src/App.jsx ***!
+  !*** ./src/app.jsx ***!
   \*********************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -9883,27 +9883,27 @@ module.exports = g;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_Game_Game__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Game/Game */ "./src/components/Game/Game.jsx");
+/* harmony import */ var _components_game_game__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/game/game */ "./src/components/game/game.jsx");
 
 
 
 function App() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Game_Game__WEBPACK_IMPORTED_MODULE_1__["default"], null);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_game_game__WEBPACK_IMPORTED_MODULE_1__["default"], null);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
 
 /***/ }),
 
-/***/ "./src/components/Game/Game.css":
+/***/ "./src/components/game/game.css":
 /*!**************************************!*\
-  !*** ./src/components/Game/Game.css ***!
+  !*** ./src/components/game/game.css ***!
   \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!./Game.css */ "./node_modules/css-loader/dist/cjs.js!./src/components/Game/Game.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!./game.css */ "./node_modules/css-loader/dist/cjs.js!./src/components/game/game.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -9925,9 +9925,9 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./src/components/Game/Game.jsx":
+/***/ "./src/components/game/game.jsx":
 /*!**************************************!*\
-  !*** ./src/components/Game/Game.jsx ***!
+  !*** ./src/components/game/game.jsx ***!
   \**************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -9938,10 +9938,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _KEYS__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./KEYS */ "./src/components/Game/KEYS.js");
-/* harmony import */ var _YelpContainer_YelpContainer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../YelpContainer/YelpContainer */ "./src/components/YelpContainer/YelpContainer.jsx");
-/* harmony import */ var _Game_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Game.css */ "./src/components/Game/Game.css");
-/* harmony import */ var _Game_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_Game_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _keys__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./keys */ "./src/components/game/keys.js");
+/* harmony import */ var _yelp_container_yelp_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../yelp-container/yelp-container */ "./src/components/yelp-container/yelp-container.jsx");
+/* harmony import */ var _game_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./game.css */ "./src/components/game/game.css");
+/* harmony import */ var _game_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_game_css__WEBPACK_IMPORTED_MODULE_4__);
 
 
 
@@ -9953,6 +9953,7 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     super(props);
     this.state = {
       search: '',
+      filter: '',
       yelp: [],
       bracket: []
     };
@@ -9968,7 +9969,7 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   yelpDate(location) {
     axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/search?location=${location}`, {
       headers: {
-        Authorization: `Bearer ${_KEYS__WEBPACK_IMPORTED_MODULE_2__["default"]}`
+        Authorization: `Bearer ${_keys__WEBPACK_IMPORTED_MODULE_2__["default"]}`
       },
       params: {
         categories: 'lunch'
@@ -9997,7 +9998,7 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     const yelpData = [...this.state.yelp];
     const bracket = yelpData.slice(0, 2);
     const yelpBracket = bracket.map(business => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_YelpContainer_YelpContainer__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_yelp_container_yelp_container__WEBPACK_IMPORTED_MODULE_3__["default"], {
         name: business.name,
         image: business.image_url,
         key: business.name,
@@ -10023,7 +10024,7 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
       onSubmit: this.handleSubmit
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "search :", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
       type: "text",
@@ -10033,7 +10034,7 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       type: "submit",
       value: "Submit",
       onSubmit: this.handleSubmit
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.yelp ? this.renderYelpData() : 'loading')));
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.yelp ? this.renderYelpData() : 'loading'))));
   }
 
 }
@@ -10042,9 +10043,9 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
-/***/ "./src/components/Game/KEYS.js":
+/***/ "./src/components/game/keys.js":
 /*!*************************************!*\
-  !*** ./src/components/Game/KEYS.js ***!
+  !*** ./src/components/game/keys.js ***!
   \*************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -10056,10 +10057,10 @@ let API_key = 'Y4noU6PPXhBRFrqRgmv-bnpO09SHmLhp9vUbmbrOJlak2Wy9MvFj7i3elJbFn4l9U
 
 /***/ }),
 
-/***/ "./src/components/YelpContainer/YelpContainer.jsx":
-/*!********************************************************!*\
-  !*** ./src/components/YelpContainer/YelpContainer.jsx ***!
-  \********************************************************/
+/***/ "./src/components/yelp-container/yelp-container.jsx":
+/*!**********************************************************!*\
+  !*** ./src/components/yelp-container/yelp-container.jsx ***!
+  \**********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -10120,15 +10121,15 @@ class YelpContainer extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
-/***/ "./src/components/YelpContainer/yelp.css":
-/*!***********************************************!*\
-  !*** ./src/components/YelpContainer/yelp.css ***!
-  \***********************************************/
+/***/ "./src/components/yelp-container/yelp.css":
+/*!************************************************!*\
+  !*** ./src/components/yelp-container/yelp.css ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!./yelp.css */ "./node_modules/css-loader/dist/cjs.js!./src/components/YelpContainer/yelp.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js!./yelp.css */ "./node_modules/css-loader/dist/cjs.js!./src/components/yelp-container/yelp.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -10163,14 +10164,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App */ "./src/App.jsx");
-/* harmony import */ var _src_components_YelpContainer_yelp_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../src/components/YelpContainer/yelp.css */ "./src/components/YelpContainer/yelp.css");
-/* harmony import */ var _src_components_YelpContainer_yelp_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_src_components_YelpContainer_yelp_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app */ "./src/app.jsx");
+/* harmony import */ var _components_yelp_container_yelp_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/yelp-container/yelp.css */ "./src/components/yelp-container/yelp.css");
+/* harmony import */ var _components_yelp_container_yelp_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_yelp_container_yelp_css__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
 
-react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_App__WEBPACK_IMPORTED_MODULE_2__["default"], null), document.getElementById('root'));
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_app__WEBPACK_IMPORTED_MODULE_2__["default"], null), document.getElementById('root'));
 
 /***/ })
 
