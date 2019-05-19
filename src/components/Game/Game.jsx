@@ -113,6 +113,7 @@ class Game extends Component {
 
     render() {
       return (
+        <div>
           <form onSubmit={this.handleSubmit}>
             <label>
               search :
@@ -122,13 +123,12 @@ class Game extends Component {
               <div>{this.state.yelp ? this.renderYelpData():'loading'}</div>
             </label>
           </form>
-
           <button className={this.state.yelp.length>=1?'random-button':'hide'} onClick={this.handleRandomPick}>Pick for Me!</button>
         </div>
 
       );
     }
-  }
+  
 
 export default Game;
   
