@@ -1,0 +1,10 @@
+.random-button{
+    background-color: slategray;
+    padding:5px;
+    border-radius: 5px;
+    border: 2px solid gray
+}
+
+.hide{
+    display: none;
+}
