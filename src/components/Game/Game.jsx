@@ -113,11 +113,7 @@ class Game extends Component {
     }
 
     handleSubmit(event) {
-      event.preventDefault(); 
-      // this.setState({ param: event.target.value}, () => {
-      //   console.log('this.state.param :', this.state.param);})
-      // this.getYelpData();
-      // this.renderYelpData();
+      event.preventDefault(); //
     }    
     handleClick(event) {
       const keyword = event.target.getAttribute('value')
@@ -127,21 +123,23 @@ class Game extends Component {
 
     render() {
       return (
-        <div>
-          <form onSubmit={this.handleSubmit}>
+        <div className="search">
+          <form className="search__form" onSubmit={this.handleSubmit}>
             <label>
               search :
               <input type="text" value={this.state.search} onChange={this.handleChange} /><p className="error"></p>
               <br/>
           </label> 
-          </form>              
-              <button value="Koreanfood" className="food" dataid="restaurant" onClick={this.handleClick}>Korean Food</button>
-              <button value="mexicanfood" className="drink" dataid="drink" onClick={this.handleClick}>Mexican Food</button>
-              <button value="americanfood" className="drink" dataid="drink" onClick={this.handleClick}>AmericanFood</button>
-              <button value="desert" className="desert" dataid="desert" onClick={this.handleClick}>Desert</button>
-              <button value="tea" className="desert" dataid="desert" onClick={this.handleClick}>Tea</button>
-              <button value="bar" className="drink" dataid="drink" onClick={this.handleClick}>Drink</button>
-              <div>{this.state.yelp ? this.renderYelpData():'loading'}</div>
+          </form>  
+          <div className="food__button">            
+            <button value="Koreanfood" className="food" onClick={this.handleClick}>Korean Food</button>
+            <button value="mexicanfood" className="drink" onClick={this.handleClick}>Mexican Food</button>
+            <button value="americanfood" className="drink" onClick={this.handleClick}>American Food</button>
+            <button value="desert" className="desert" onClick={this.handleClick}>Desert</button>
+            <button value="tea" className="desert" onClick={this.handleClick}>Tea</button>
+            <button value="bar" className="drink" onClick={this.handleClick}>Drink</button>
+          </div>    
+          <div className="section__container">{this.state.yelp ? this.renderYelpData():'loading'}</div>
           <button className={this.state.yelp.length>=1?'random-button':'hide'} onClick={this.handleRandomPick}>Pick for Me!</button>
         </div>
       );
