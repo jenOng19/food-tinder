@@ -9956,12 +9956,21 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       filter: '',
       yelp: [],
 <<<<<<< HEAD
+<<<<<<< HEAD
       bracket: [] // twoChoices:[]
 
 =======
       bracket: [],
       round: 0
 >>>>>>> 8a08fba81b3ad73879db49605588cbb03520e45b
+=======
+      bracket: [],
+      round: 0
+=======
+      bracket: [] // twoChoices:[]
+
+>>>>>>> dev
+>>>>>>> 183945192c79ed1d6f095374abe760ffca973ccf
     };
     this.limit = null;
     this.handleChange = this.handleChange.bind(this);
@@ -10071,13 +10080,22 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       value: "Submit",
       onSubmit: this.handleSubmit
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    }), this.state.yelp.length > 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Round: ", this.state.round) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.yelp ? this.renderYelpData() : 'loading')));
+=======
+>>>>>>> 183945192c79ed1d6f095374abe760ffca973ccf
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.yelp ? this.renderYelpData() : 'loading'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: this.state.yelp.length >= 1 ? 'random-button' : 'hide',
       onClick: this.handleRandomPick
     }, "Pick for Me!"));
+<<<<<<< HEAD
 =======
     }), this.state.yelp.length > 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Round: ", this.state.round) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.yelp ? this.renderYelpData() : 'loading')));
 >>>>>>> 8a08fba81b3ad73879db49605588cbb03520e45b
+=======
+>>>>>>> dev
+>>>>>>> 183945192c79ed1d6f095374abe760ffca973ccf
   }
 
 }

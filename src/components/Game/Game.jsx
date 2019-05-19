@@ -13,7 +13,7 @@ class Game extends Component {
         yelp: [],
         bracket: [],
         round: 0
-      };
+      }
       this.limit = null;
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -128,7 +128,7 @@ class Game extends Component {
         </div>
       );
     }
-  }
-
+  
+}
 export default Game;
   
