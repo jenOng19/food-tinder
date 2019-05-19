@@ -9955,9 +9955,15 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       search: '',
       filter: '',
       yelp: [],
+<<<<<<< HEAD
+      bracket: [],
+      round: 0
+=======
       bracket: [] // twoChoices:[]
 
+>>>>>>> dev
     };
+    this.limit = null;
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.clickHandler = this.clickHandler.bind(this);
@@ -9974,11 +9980,16 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         Authorization: `Bearer ${_keys__WEBPACK_IMPORTED_MODULE_2__["default"]}`
       },
       params: {
-        categories: 'lunch'
+        categories: 'lunch',
+        // 8 , 16 , 32 bracket
+        limit: 16
       }
     }).then(res => {
       this.setState({
-        yelp: res.data.businesses
+        yelp: res.data.businesses,
+        round: this.state.round + 1
+      }, () => {
+        this.limit = this.state.yelp.length / 2;
       });
     }).catch(err => {
       console.log('error');
@@ -10001,7 +10012,22 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     this.setState({
       yelp: updatedYelp,
       bracket: [...this.state.bracket, this.state.yelp[chosenOne]]
-    }, () => console.log(this.state.bracket));
+    }, this.nextRound);
+  }
+
+  nextRound() {
+    console.log(this.state);
+    if (this.state.bracket.length === this.limit) return this.state.bracket.length === 1 && this.state.yelp.length === 0 ? this.setState({
+      yelp: [...this.state.bracket],
+      bracket: [],
+      round: 'Winner'
+    }) : this.setState({
+      yelp: [...this.state.bracket],
+      bracket: [],
+      round: this.state.round + 1
+    }, () => {
+      this.limit = this.state.yelp.length / 2;
+    });
   }
 
   renderYelpData() {
@@ -10034,7 +10060,7 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
       onSubmit: this.handleSubmit
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "search :", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
       type: "text",
@@ -10044,10 +10070,14 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       type: "submit",
       value: "Submit",
       onSubmit: this.handleSubmit
+<<<<<<< HEAD
+    }), this.state.yelp.length > 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Round: ", this.state.round) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.yelp ? this.renderYelpData() : 'loading')));
+=======
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.yelp ? this.renderYelpData() : 'loading'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: this.state.yelp.length >= 1 ? 'random-button' : 'hide',
       onClick: this.handleRandomPick
     }, "Pick for Me!"));
+>>>>>>> dev
   }
 
 }
