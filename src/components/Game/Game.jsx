@@ -13,6 +13,11 @@ class Game extends Component {
         yelp: [],
         bracket: [],
         round: 0
+        param: '',
+        error: false
+      };
+      this.getYelpData = this.getYelpData.bind(this);
+      this.handleClick = this.handleClick.bind(this);
       this.limit = null;
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -30,8 +35,7 @@ class Game extends Component {
         Authorization: `Bearer ${API_key}`
       },
       params: {
-        categories: 'lunch',
-        // 8 , 16 , 32 bracket
+        term : this.state.param
         limit: 16
       }
       })
@@ -44,6 +48,7 @@ class Game extends Component {
         })
       })
       .catch((err) => {
+        this.setState({error: true})
         console.log ('error')
       })  
     } 
@@ -85,6 +90,7 @@ class Game extends Component {
     }
 
     renderYelpData () {
+      console.log('this.state.yelp :', this.state.yelp);
       const yelpData = [...this.state.yelp];
       const bracket = yelpData.slice(0 , 2)
 
@@ -103,12 +109,20 @@ class Game extends Component {
     
     handleChange(event) {
       this.setState({ search: event.target.value });
+      console.log('this.state after change :', this.state);
     }
 
     handleSubmit(event) {
-      event.preventDefault();
-      this.getYelpData();
-      this.renderYelpData();
+      event.preventDefault(); 
+      // this.setState({ param: event.target.value}, () => {
+      //   console.log('this.state.param :', this.state.param);})
+      // this.getYelpData();
+      // this.renderYelpData();
+    }    
+    handleClick(event) {
+      const keyword = event.target.getAttribute('value')
+      this.setState({param: keyword }, () => {  
+        this.getYelpData();})      
     }
 
     render() {
@@ -117,18 +131,22 @@ class Game extends Component {
           <form onSubmit={this.handleSubmit}>
             <label>
               search :
-              <input type="text" value={this.state.search} onChange={this.handleChange} />
-              <input type="submit" value="Submit" onSubmit={this.handleSubmit}/>
-              { (this.state.yelp.length > 0) ? <h1>Round: {this.state.round}</h1> : null}
+              <input type="text" value={this.state.search} onChange={this.handleChange} /><p className="error"></p>
+              <br/>
+          </label> 
+          </form>              
+              <button value="Koreanfood" className="food" dataid="restaurant" onClick={this.handleClick}>Korean Food</button>
+              <button value="mexicanfood" className="drink" dataid="drink" onClick={this.handleClick}>Mexican Food</button>
+              <button value="americanfood" className="drink" dataid="drink" onClick={this.handleClick}>AmericanFood</button>
+              <button value="desert" className="desert" dataid="desert" onClick={this.handleClick}>Desert</button>
+              <button value="tea" className="desert" dataid="desert" onClick={this.handleClick}>Tea</button>
+              <button value="bar" className="drink" dataid="drink" onClick={this.handleClick}>Drink</button>
               <div>{this.state.yelp ? this.renderYelpData():'loading'}</div>
-            </label>
-          </form>
           <button className={this.state.yelp.length>=1?'random-button':'hide'} onClick={this.handleRandomPick}>Pick for Me!</button>
         </div>
-
       );
     }
-  
+  } 
 
 export default Game;
   

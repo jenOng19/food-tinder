@@ -15418,6 +15418,12 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     this.state = {
       search: '',
       filter: '',
+<<<<<<< HEAD
+      yelp: null,
+      bracket: [],
+      param: '',
+      error: false
+=======
       yelp: [],
 <<<<<<< HEAD
       bracket: [],
@@ -15426,12 +15432,18 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       bracket: [] // twoChoices:[]
 
 >>>>>>> dev
+>>>>>>> 42b1f13fe6093fea2ca7019cbd8c03a050ec3ece
     };
     this.limit = null;
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.clickHandler = this.clickHandler.bind(this);
+<<<<<<< HEAD
+    this.getYelpData = this.getYelpData.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+=======
     this.handleRandomPick = this.handleRandomPick.bind(this);
+>>>>>>> 42b1f13fe6093fea2ca7019cbd8c03a050ec3ece
   }
 
   getYelpData() {
@@ -15444,9 +15456,13 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         Authorization: `Bearer ${_keys__WEBPACK_IMPORTED_MODULE_2__["default"]}`
       },
       params: {
+<<<<<<< HEAD
+        term: this.state.param
+=======
         categories: 'lunch',
         // 8 , 16 , 32 bracket
         limit: 16
+>>>>>>> 42b1f13fe6093fea2ca7019cbd8c03a050ec3ece
       }
     }).then(res => {
       this.setState({
@@ -15456,6 +15472,9 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         this.limit = this.state.yelp.length / 2;
       });
     }).catch(err => {
+      this.setState({
+        error: true
+      });
       console.log('error');
     });
   }
@@ -15495,6 +15514,7 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   renderYelpData() {
+    console.log('this.state.yelp :', this.state.yelp);
     const yelpData = [...this.state.yelp];
     const bracket = yelpData.slice(0, 2);
     const yelpBracket = bracket.map(business => {
@@ -15515,12 +15535,23 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     this.setState({
       search: event.target.value
     });
+    console.log('this.state after change :', this.state);
   }
 
   handleSubmit(event) {
-    event.preventDefault();
-    this.getYelpData();
-    this.renderYelpData();
+    event.preventDefault(); // this.setState({ param: event.target.value}, () => {
+    //   console.log('this.state.param :', this.state.param);})
+    // this.getYelpData();
+    // this.renderYelpData();
+  }
+
+  handleClick(event) {
+    const keyword = event.target.getAttribute('value');
+    this.setState({
+      param: keyword
+    }, () => {
+      this.getYelpData();
+    });
   }
 
   render() {
@@ -15530,6 +15561,41 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       type: "text",
       value: this.state.search,
       onChange: this.handleChange
+<<<<<<< HEAD
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "error"
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      value: "Koreanfood",
+      className: "food",
+      dataid: "restaurant",
+      onClick: this.handleClick
+    }, "Korean Food"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      value: "mexicanfood",
+      className: "drink",
+      dataid: "drink",
+      onClick: this.handleClick
+    }, "Mexican Food"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      value: "americanfood",
+      className: "drink",
+      dataid: "drink",
+      onClick: this.handleClick
+    }, "AmericanFood"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      value: "desert",
+      className: "desert",
+      dataid: "desert",
+      onClick: this.handleClick
+    }, "Desert"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      value: "tea",
+      className: "desert",
+      dataid: "desert",
+      onClick: this.handleClick
+    }, "Tea"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      value: "bar",
+      className: "drink",
+      dataid: "drink",
+      onClick: this.handleClick
+    }, "Drink"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.yelp ? this.renderYelpData() : 'loading'));
+=======
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
       type: "submit",
       value: "Submit",
@@ -15542,6 +15608,7 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       onClick: this.handleRandomPick
     }, "Pick for Me!"));
 >>>>>>> dev
+>>>>>>> 42b1f13fe6093fea2ca7019cbd8c03a050ec3ece
   }
 
 }
@@ -15559,8 +15626,12 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+<<<<<<< HEAD
+let API_key = 'xNeotD9tXeETUfPpNuEbideztro4aK18Kh8IcerVAD54yGmkRg-PZdYhlBQPzgDg8SuyJJPVp__6Zw73QyvLp2OgmaaTap_Rc1Z7EX3ylcLFHhRiHzNBFNhPdo6_XHYx';
+=======
 let API_key = 'xNeotD9tXeETUfPpNuEbideztro4aK18Kh8IcerVAD54yGmkRg-PZdYhlBQPzgDg8SuyJJPVp__6Zw73QyvLp2OgmaaTap_Rc1Z7EX3ylcLFHhRiHzNBFNhPdo6_XHYx'; //kate's :'Y4noU6PPXhBRFrqRgmv-bnpO09SHmLhp9vUbmbrOJlak2Wy9MvFj7i3elJbFn4l9UX82yo9E6iTIXUvLdIaEieEGW2Ok3RBuGip8HueeUcjX2Uw63k3nydopXDLHXHYx';
 
+>>>>>>> 42b1f13fe6093fea2ca7019cbd8c03a050ec3ece
 /* harmony default export */ __webpack_exports__["default"] = (API_key);
 
 /***/ }),
