@@ -15418,6 +15418,7 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     this.state = {
       search: '',
       filter: '',
+      gameStart: false,
       yelp: [],
       bracket: [],
       round: 0,
@@ -15444,12 +15445,13 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       params: {
         term: this.state.param,
-        limit: 16
+        limit: 8
       }
     }).then(res => {
       this.setState({
         yelp: res.data.businesses,
-        round: this.state.round + 1
+        round: this.state.round + 1,
+        gameStart: true
       }, () => {
         this.limit = this.state.yelp.length / 2;
       });
@@ -15521,10 +15523,7 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   handleSubmit(event) {
-    event.preventDefault(); // this.setState({ param: event.target.value}, () => {
-    //   console.log('this.state.param :', this.state.param);})
-    // this.getYelpData();
-    // this.renderYelpData();
+    event.preventDefault();
   }
 
   handleClick(event) {
@@ -15537,7 +15536,10 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, !this.state.gameStart ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "search"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      className: "search__form",
       onSubmit: this.handleSubmit
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "search :", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
       type: "text",
@@ -15545,40 +15547,38 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       onChange: this.handleChange
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "error"
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      value: "Koreanfood",
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "food__button"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      value: "korean",
       className: "food",
-      dataid: "restaurant",
       onClick: this.handleClick
     }, "Korean Food"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      value: "mexicanfood",
+      value: "mexican",
       className: "drink",
-      dataid: "drink",
       onClick: this.handleClick
     }, "Mexican Food"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      value: "americanfood",
+      value: "american",
       className: "drink",
-      dataid: "drink",
       onClick: this.handleClick
-    }, "AmericanFood"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    }, "American Food"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       value: "desert",
       className: "desert",
-      dataid: "desert",
       onClick: this.handleClick
     }, "Desert"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       value: "tea",
       className: "desert",
-      dataid: "desert",
       onClick: this.handleClick
     }, "Tea"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       value: "bar",
       className: "drink",
-      dataid: "drink",
       onClick: this.handleClick
-    }, "Drink"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.yelp ? this.renderYelpData() : 'loading'), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    }, "Drink"))) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.yelp.length > 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Round ", this.state.round) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "section__container"
+    }, this.state.yelp ? this.renderYelpData() : 'loading'), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: this.state.yelp.length >= 1 ? 'random-button' : 'hide',
       onClick: this.handleRandomPick
-    }, "Pick for Me!"));
+    }, "Pick for Me!"), this.state.bracket.length === 1 && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Reset")));
   }
 
 }
@@ -15596,7 +15596,8 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-let API_key = 'xNeotD9tXeETUfPpNuEbideztro4aK18Kh8IcerVAD54yGmkRg-PZdYhlBQPzgDg8SuyJJPVp__6Zw73QyvLp2OgmaaTap_Rc1Z7EX3ylcLFHhRiHzNBFNhPdo6_XHYx'; //kate's :'Y4noU6PPXhBRFrqRgmv-bnpO09SHmLhp9vUbmbrOJlak2Wy9MvFj7i3elJbFn4l9UX82yo9E6iTIXUvLdIaEieEGW2Ok3RBuGip8HueeUcjX2Uw63k3nydopXDLHXHYx';
+let API_key = 'Y4noU6PPXhBRFrqRgmv-bnpO09SHmLhp9vUbmbrOJlak2Wy9MvFj7i3elJbFn4l9UX82yo9E6iTIXUvLdIaEieEGW2Ok3RBuGip8HueeUcjX2Uw63k3nydopXDLHXHYx'; // 'xNeotD9tXeETUfPpNuEbideztro4aK18Kh8IcerVAD54yGmkRg-PZdYhlBQPzgDg8SuyJJPVp__6Zw73QyvLp2OgmaaTap_Rc1Z7EX3ylcLFHhRiHzNBFNhPdo6_XHYx';
+//kate's :'Y4noU6PPXhBRFrqRgmv-bnpO09SHmLhp9vUbmbrOJlak2Wy9MvFj7i3elJbFn4l9UX82yo9E6iTIXUvLdIaEieEGW2Ok3RBuGip8HueeUcjX2Uw63k3nydopXDLHXHYx';
 
 /* harmony default export */ __webpack_exports__["default"] = (API_key);
 
