@@ -36,7 +36,7 @@ class Game extends Component {
       },
       params: {
         term : this.state.param,
-        limit: 16
+        limit: 8
       }
       })
       .then((res) => {
@@ -126,15 +126,14 @@ class Game extends Component {
         <div className="search">
           <form className="search__form" onSubmit={this.handleSubmit}>
             <label>
-              search :
-              <input type="text" value={this.state.search} onChange={this.handleChange} /><p className="error"></p>
-              <br/>
+              search : 
+              <input className = "input__form" type="text" value={this.state.search} onChange={this.handleChange} /><p className="error"></p>
           </label> 
           </form>  
           <div className="food__button">            
-            <button value="Koreanfood" className="food" onClick={this.handleClick}>Korean Food</button>
-            <button value="mexicanfood" className="drink" onClick={this.handleClick}>Mexican Food</button>
-            <button value="americanfood" className="drink" onClick={this.handleClick}>American Food</button>
+            <button value="Korean" className="food1" onClick={this.handleClick}>Korean Food</button>
+            <button value="mexican" className="food2" onClick={this.handleClick}>Mexican Food</button>
+            <button value="restaurant" className="food3" onClick={this.handleClick}>restaurants</button>
             <button value="desert" className="desert" onClick={this.handleClick}>Desert</button>
             <button value="tea" className="desert" onClick={this.handleClick}>Tea</button>
             <button value="bar" className="drink" onClick={this.handleClick}>Drink</button>

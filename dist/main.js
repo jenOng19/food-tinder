@@ -1766,8 +1766,11 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap);", ""]);
+
 // Module
-exports.push([module.i, ".random-button{\n    background-color: slategray;\n    padding:5px;\n    border-radius: 5px;\n    border: 2px solid gray\n}\n\n.hide{\n    display: none;\n}", ""]);
+exports.push([module.i, ".random-button{\n    background-color: slategray;\n    padding:5px;\n    border-radius: 5px;\n    border: 2px solid gray\n}\n.hide{\n    display: none;\n}\n\n.search {\n    text-align: center;\n    font-family: 'Merriweather Sans', sans-serif;\n}\n.input__form{\n    all: unset;\n    border: 1.5px solid rgb(180, 193, 228);\n    border-radius: 5px;\n    margin-top: 2px;\n    margin-bottom: 2px;\n}\n.food1, .food2, .food3, .desert, .drink {\n    all: unset;\n    font-size: 0.7rem;\n    border: 1px solid rgb(177, 182, 197);\n    border-radius: 5px;\n    padding: 3px;\n    margin-left: 2px;\n    box-shadow: 1px 1px 1px  #ccc;\n}\n.food1, .food2 {\n    background-color: orange;\n}\n.food3 {\n    background-color: rgb(238, 132, 173);\n}\n.drink {\n    background-color: rgb(212, 134, 243);\n}\n.desert {\n    background-color: rgb(160, 212, 233);\n}", ""]);
 
 
 
@@ -15444,7 +15447,7 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       params: {
         term: this.state.param,
-        limit: 16
+        limit: 8
       }
     }).then(res => {
       this.setState({
@@ -15521,10 +15524,7 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   handleSubmit(event) {
-    event.preventDefault(); // this.setState({ param: event.target.value}, () => {
-    //   console.log('this.state.param :', this.state.param);})
-    // this.getYelpData();
-    // this.renderYelpData();
+    event.preventDefault(); //
   }
 
   handleClick(event) {
@@ -15537,45 +15537,47 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "search"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      className: "search__form",
       onSubmit: this.handleSubmit
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "search :", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      className: "input__form",
       type: "text",
       value: this.state.search,
       onChange: this.handleChange
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "error"
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      value: "Koreanfood",
-      className: "food",
-      dataid: "restaurant",
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "food__button"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      value: "Korean",
+      className: "food1",
       onClick: this.handleClick
     }, "Korean Food"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      value: "mexicanfood",
-      className: "drink",
-      dataid: "drink",
+      value: "mexican",
+      className: "food2",
       onClick: this.handleClick
     }, "Mexican Food"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      value: "americanfood",
-      className: "drink",
-      dataid: "drink",
+      value: "restaurant",
+      className: "food3",
       onClick: this.handleClick
-    }, "AmericanFood"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    }, "restaurants"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       value: "desert",
       className: "desert",
-      dataid: "desert",
       onClick: this.handleClick
     }, "Desert"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       value: "tea",
       className: "desert",
-      dataid: "desert",
       onClick: this.handleClick
     }, "Tea"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       value: "bar",
       className: "drink",
-      dataid: "drink",
       onClick: this.handleClick
-    }, "Drink"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.yelp ? this.renderYelpData() : 'loading'), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    }, "Drink")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "section__container"
+    }, this.state.yelp ? this.renderYelpData() : 'loading'), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: this.state.yelp.length >= 1 ? 'random-button' : 'hide',
       onClick: this.handleRandomPick
     }, "Pick for Me!"));
