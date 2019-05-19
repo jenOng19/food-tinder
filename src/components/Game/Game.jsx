@@ -10,10 +10,15 @@ class Game extends Component {
       this.state = { 
         search: '', 
         filter: '',
+        gameStart: false,
         yelp: [],
         bracket: [],
-        round: 0
-      }
+        round: 0,
+        param: '',
+        error: false
+      };
+      this.getYelpData = this.getYelpData.bind(this);
+      this.handleClick = this.handleClick.bind(this);
       this.limit = null;
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -21,30 +26,31 @@ class Game extends Component {
       this.handleRandomPick=this.handleRandomPick.bind(this)
     }
 
-    getYelpData () {
+    getYelpData() {
       this.yelpDate(this.state.search);
     }
 
-    yelpDate (location) {
+    yelpDate(location) {
       axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/search?location=${location}`, {
       headers: {
         Authorization: `Bearer ${API_key}`
       },
       params: {
-        categories: 'lunch',
-        // 8 , 16 , 32 bracket
-        limit: 16
+        term : this.state.param,
+        limit: 8
       }
       })
       .then((res) => {
         this.setState({
           yelp: res.data.businesses,
-          round: this.state.round + 1
+          round: this.state.round + 1,
+          gameStart: true
         }, () => {
           this.limit = this.state.yelp.length / 2
         })
       })
       .catch((err) => {
+        this.setState({error: true})
         console.log ('error')
       })  
     } 
@@ -85,10 +91,10 @@ class Game extends Component {
       
     }
 
-    renderYelpData () {
+    renderYelpData() {
+      console.log('this.state.yelp :', this.state.yelp);
       const yelpData = [...this.state.yelp];
       const bracket = yelpData.slice(0 , 2)
-
       const yelpBracket = bracket.map( business => {
         return <YelpContainer name={business.name}
                               image={business.image_url}
@@ -104,31 +110,48 @@ class Game extends Component {
     
     handleChange(event) {
       this.setState({ search: event.target.value });
+      console.log('this.state after change :', this.state);
     }
 
     handleSubmit(event) {
-      event.preventDefault();
-      this.getYelpData();
-      this.renderYelpData();
+      event.preventDefault(); 
+    }    
+    handleClick(event) {
+      const keyword = event.target.getAttribute('value')
+      this.setState({param: keyword }, () => {  
+        this.getYelpData()})      
     }
 
     render() {
       return (
         <div>
-          <form onSubmit={this.handleSubmit}>
-            <label>
-              search :
-              <input type="text" value={this.state.search} onChange={this.handleChange} />
-              <input type="submit" value="Submit" onSubmit={this.handleSubmit}/>
-              { (this.state.yelp.length > 0) ? <h1>Round: {this.state.round}</h1> : null}
-              <div>{this.state.yelp ? this.renderYelpData():'loading'}</div>
-            </label>
-          </form>
-          <button className={this.state.yelp.length>=1?'random-button':'hide'} onClick={this.handleRandomPick}>Pick for Me!</button>
+          {!this.state.gameStart ? <div className="search">
+            <form className="search__form" onSubmit={this.handleSubmit}>
+              <label>
+                search :
+                <input className = "input__form" type="text" value={this.state.search} onChange={this.handleChange} /><p className="error"></p>
+                <br/>
+            </label> 
+            </form>  
+            <div className="food__button">            
+              <button value="korean" className="food1" onClick={this.handleClick}>Korean Food</button>
+              <button value="mexican" className="food2" onClick={this.handleClick}>Mexican Food</button>
+              <button value="american" className="food3" onClick={this.handleClick}>American Food</button>
+              <button value="desert" className="desert" onClick={this.handleClick}>Desert</button>
+              <button value="tea" className="desert" onClick={this.handleClick}>Tea</button>
+              <button value="bar" className="drink" onClick={this.handleClick}>Drink</button>
+            </div>
+          </div> : null}
+          <div>
+            { this.state.yelp.length > 0 ? <h1>Round { this.state.round }</h1> : null}
+            <div className="section__container">{this.state.yelp ? this.renderYelpData():'loading'}</div>
+            <button className={this.state.yelp.length>=1?'random-button':'hide'} onClick={this.handleRandomPick}>Pick for Me!</button>
+            { this.state.bracket.length === 1 && <button>Reset</button>}
+          </div>
         </div>
-      );
+        
+      )
     }
-  
-}
+} 
+
 export default Game;
-  

@@ -1,10 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap');
 .random-button{
     background-color: slategray;
     padding:5px;
     border-radius: 5px;
     border: 2px solid gray
 }
-
 .hide{
     display: none;
+}
+
+.search {
+    text-align: center;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+.input__form{
+    all: unset;
+    border: 1.5px solid rgb(180, 193, 228);
+    border-radius: 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.food1, .food2, .food3, .desert, .drink {
+    all: unset;
+    font-size: 0.7rem;
+    border: 1px solid rgb(177, 182, 197);
+    border-radius: 5px;
+    padding: 3px;
+    margin-left: 2px;
+    box-shadow: 1px 1px 1px  #ccc;
+}
+.food1, .food2 {
+    background-color: orange;
+}
+.food3 {
+    background-color: rgb(238, 132, 173);
+}
+.drink {
+    background-color: rgb(212, 134, 243);
+}
+.desert {
+    background-color: rgb(160, 212, 233);
 }
