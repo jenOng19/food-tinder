@@ -12,7 +12,7 @@ class Game extends Component {
         filter: '',
         yelp: [],
         bracket: [],
-        round: 0
+        round: 0,
         param: '',
         error: false
       };
@@ -35,7 +35,7 @@ class Game extends Component {
         Authorization: `Bearer ${API_key}`
       },
       params: {
-        term : this.state.param
+        term : this.state.param,
         limit: 16
       }
       })
