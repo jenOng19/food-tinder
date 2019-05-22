@@ -1770,7 +1770,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap);", ""]);
 
 // Module
-exports.push([module.i, ".random-button{\n    background-color: slategray;\n    padding:5px;\n    border-radius: 5px;\n    border: 2px solid gray\n}\n.hide{\n    display: none;\n}\n\n.search {\n    text-align: center;\n    font-family: 'Merriweather Sans', sans-serif;\n}\n.input__form{\n    all: unset;\n    border: 1.5px solid rgb(180, 193, 228);\n    border-radius: 5px;\n    margin-top: 2px;\n    margin-bottom: 2px;\n}\n.food1, .food2, .food3, .desert, .drink {\n    all: unset;\n    font-size: 0.7rem;\n    border: 1px solid rgb(177, 182, 197);\n    border-radius: 5px;\n    padding: 3px;\n    margin-left: 2px;\n    box-shadow: 1px 1px 1px  #ccc;\n}\n.food1, .food2 {\n    background-color: orange;\n}\n.food3 {\n    background-color: rgb(238, 132, 173);\n}\n.drink {\n    background-color: rgb(212, 134, 243);\n}\n.desert {\n    background-color: rgb(160, 212, 233);\n}", ""]);
+exports.push([module.i, ".random-button{\r\n    background-color: slategray;\r\n    padding:5px;\r\n    border-radius: 5px;\r\n    border: 2px solid gray\r\n}\r\n.hide{\r\n    display: none;\r\n}\r\n\r\n.search {\r\n    text-align: center;\r\n    font-family: 'Merriweather Sans', sans-serif;\r\n}\r\n.input__form{\r\n    all: unset;\r\n    border: 1.5px solid rgb(180, 193, 228);\r\n    border-radius: 5px;\r\n    margin-top: 2px;\r\n    margin-bottom: 2px;\r\n}\r\n.food1, .food2, .food3, .desert, .drink {\r\n    all: unset;\r\n    font-size: 0.7rem;\r\n    border: 1px solid rgb(177, 182, 197);\r\n    border-radius: 5px;\r\n    padding: 3px;\r\n    margin-left: 2px;\r\n    box-shadow: 1px 1px 1px  #ccc;\r\n}\r\n.food1, .food2 {\r\n    background-color: orange;\r\n}\r\n.food3 {\r\n    background-color: rgb(238, 132, 173);\r\n}\r\n.drink {\r\n    background-color: rgb(212, 134, 243);\r\n}\r\n.desert {\r\n    background-color: rgb(160, 212, 233);\r\n}", ""]);
 
 
 
@@ -1785,7 +1785,7 @@ exports.push([module.i, ".random-button{\n    background-color: slategray;\n    
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, ".yelp-img{\n    height: 200px;\n    width: 200px;\n    cursor: pointer;\n}\n\n.yelp-name {\n    cursor: pointer;\n}\n\n.yelpInfoButton {\n    border: 1px solid red;\n    cursor: pointer;\n    display:inline-block;\n}\n\n.yelpMoreInfo {\n    opacity: 0;\n    visibility: hidden;\n    transition: all .5s;\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(0,0,0,.6);\n}\n\n.yelpMoreInfo.showInfo {\n    opacity: 1;\n    visibility: visible;\n}\n\n.yelpMoreInfoContent {\n    background-color: white;\n    width: 80%;\n    height: 80%;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n}\n\n.yelpMoreInfoExit {\n    display: inline-block;\n    position: absolute;\n    top: 20px;\n    right: 20px;\n    width: 50px;\n    height: 50px;\n    background-color: white;\n}", ""]);
+exports.push([module.i, ".yelp-img{\r\n    height: 200px;\r\n    width: 200px;\r\n    cursor: pointer;\r\n}\r\n\r\n.yelp-name {\r\n    cursor: pointer;\r\n}\r\n\r\n.yelpInfoButton {\r\n    border: 1px solid red;\r\n    cursor: pointer;\r\n    display:inline-block;\r\n}\r\n\r\n.yelpMoreInfo {\r\n    opacity: 0;\r\n    visibility: hidden;\r\n    transition: all .5s;\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    bottom: 0;\r\n    background-color: rgba(0,0,0,.6);\r\n}\r\n\r\n.yelpMoreInfo.showInfo {\r\n    opacity: 1;\r\n    visibility: visible;\r\n}\r\n\r\n.yelpMoreInfoContent {\r\n    background-color: white;\r\n    width: 80%;\r\n    height: 80%;\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 50%;\r\n    transform: translate(-50%, -50%);\r\n}\r\n\r\n.yelpMoreInfoExit {\r\n    display: inline-block;\r\n    position: absolute;\r\n    top: 20px;\r\n    right: 20px;\r\n    width: 50px;\r\n    height: 50px;\r\n    background-color: white;\r\n}", ""]);
 
 
 
@@ -15423,29 +15423,10 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       filter: '',
       gameStart: false,
       yelp: [],
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      bracket: [] // twoChoices:[]
-
-=======
-      bracket: [],
-      round: 0
->>>>>>> 8a08fba81b3ad73879db49605588cbb03520e45b
-=======
-      bracket: [],
-      round: 0
-=======
-      bracket: [] // twoChoices:[]
-
->>>>>>> dev
->>>>>>> 183945192c79ed1d6f095374abe760ffca973ccf
-=======
       bracket: [],
       round: 0,
       param: '',
       error: false
->>>>>>> 5750fff1b9567706a7d8539693af27249cdc894f
     };
     this.getYelpData = this.getYelpData.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -15545,11 +15526,7 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   handleSubmit(event) {
-<<<<<<< HEAD
-    event.preventDefault(); //
-=======
     event.preventDefault();
->>>>>>> eb86d4c857034eca1dd765dc19f359b4c8013b4e
   }
 
   handleClick(event) {
@@ -15562,11 +15539,7 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
-<<<<<<< HEAD
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-=======
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, !this.state.gameStart ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
->>>>>>> eb86d4c857034eca1dd765dc19f359b4c8013b4e
       className: "search"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
       className: "search__form",
@@ -15578,11 +15551,10 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       onChange: this.handleChange
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "error"
-<<<<<<< HEAD
-    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "food__button"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      value: "Korean",
+      value: "korean",
       className: "food1",
       onClick: this.handleClick
     }, "Korean Food"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -15590,27 +15562,10 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "food2",
       onClick: this.handleClick
     }, "Mexican Food"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      value: "restaurant",
+      value: "american",
       className: "food3",
       onClick: this.handleClick
-    }, "restaurants"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-=======
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "food__button"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      value: "korean",
-      className: "food",
-      onClick: this.handleClick
-    }, "Korean Food"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      value: "mexican",
-      className: "drink",
-      onClick: this.handleClick
-    }, "Mexican Food"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      value: "american",
-      className: "drink",
-      onClick: this.handleClick
     }, "American Food"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
->>>>>>> eb86d4c857034eca1dd765dc19f359b4c8013b4e
       value: "desert",
       className: "desert",
       onClick: this.handleClick
@@ -15622,35 +15577,12 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       value: "bar",
       className: "drink",
       onClick: this.handleClick
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    }), this.state.yelp.length > 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Round: ", this.state.round) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.yelp ? this.renderYelpData() : 'loading')));
-=======
->>>>>>> 183945192c79ed1d6f095374abe760ffca973ccf
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.yelp ? this.renderYelpData() : 'loading'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      className: this.state.yelp.length >= 1 ? 'random-button' : 'hide',
-      onClick: this.handleRandomPick
-    }, "Pick for Me!"));
-<<<<<<< HEAD
-=======
-    }), this.state.yelp.length > 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Round: ", this.state.round) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.yelp ? this.renderYelpData() : 'loading')));
->>>>>>> 8a08fba81b3ad73879db49605588cbb03520e45b
-=======
->>>>>>> dev
->>>>>>> 183945192c79ed1d6f095374abe760ffca973ccf
-=======
-    }, "Drink")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-=======
     }, "Drink"))) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.yelp.length > 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Round ", this.state.round) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
->>>>>>> eb86d4c857034eca1dd765dc19f359b4c8013b4e
       className: "section__container"
     }, this.state.yelp ? this.renderYelpData() : 'loading'), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: this.state.yelp.length >= 1 ? 'random-button' : 'hide',
       onClick: this.handleRandomPick
     }, "Pick for Me!"), this.state.bracket.length === 1 && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Reset")));
->>>>>>> 5750fff1b9567706a7d8539693af27249cdc894f
   }
 
 }
@@ -15816,11 +15748,18 @@ class YelpMoreInfo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
     this.state = {
-      pictures: []
+      data: null,
+      pictures: [],
+      name: null,
+      phone: null,
+      rating: null,
+      review_count: null,
+      url: null
     };
   }
 
   getYelpPics() {
+    console.log("this data: ", this.state.data);
     let picArray = this.state.pictures.map(x => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       key: x,
       className: "yelpMoreInfoPic"
@@ -15838,7 +15777,13 @@ class YelpMoreInfo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     }).then(res => {
       console.log('res', res);
       this.setState({
-        pictures: res.data.photos
+        data: res.data,
+        pictures: res.data.photos,
+        name: res.data.name,
+        phone: res.data.display_phone,
+        rating: res.data.rating,
+        review_count: res.data.review_count,
+        url: res.data.url
       });
     }).catch(err => {
       console.log('error');
@@ -15853,7 +15798,9 @@ class YelpMoreInfo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       slidesToShow: 2,
       slidesToScroll: 1
     };
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Name:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Phone:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Address:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Pics", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Name: ", this.state.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Rating: ", this.state.rating), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Phone: ", this.state.phone), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Review Count: ", this.state.review_count), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: this.state.url
+    }, "Visit Yelp Page")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Pics:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       id: "yelpMorePics"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_slick__WEBPACK_IMPORTED_MODULE_3___default.a, settings, this.getYelpPics()))));
   }

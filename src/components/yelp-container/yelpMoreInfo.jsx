@@ -7,11 +7,18 @@ class YelpMoreInfo extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        pictures: []
+        data: null,
+        pictures: [],
+        name: null,
+        phone: null,
+        rating: null,
+        review_count: null,
+        url: null
       }
     }
 
     getYelpPics () {
+      console.log("this data: ", this.state.data)
 
     let picArray = this.state.pictures.map( x => <div key={x} className="yelpMoreInfoPic"><img src={x} /></div>);
     
@@ -29,7 +36,15 @@ class YelpMoreInfo extends Component {
       })
       .then((res) => {
         console.log( 'res', res )
-        this.setState({pictures : res.data.photos})
+        this.setState({
+          data: res.data,
+          pictures: res.data.photos,
+          name: res.data.name,
+          phone: res.data.display_phone,
+          rating: res.data.rating,
+          review_count: res.data.review_count,
+          url: res.data.url
+        })
       })
       .catch((err) => {
         console.log ('error')
@@ -48,10 +63,13 @@ class YelpMoreInfo extends Component {
 
       return (
         <div>
-          <div>Name:</div>
-          <div>Phone:</div>
-          <div>Address:</div>
-          <div>Pics
+          <div>Name: {this.state.name}</div>
+          <div>Rating: {this.state.rating}</div>
+          <div>Phone: {this.state.phone}</div>
+          <div>Review Count: {this.state.review_count}</div>
+          <div><a href={this.state.url}>Visit Yelp Page</a></div>
+          
+          <div>Pics:
             <div id="yelpMorePics">
                 <Slider {...settings}>
                     {this.getYelpPics()}
