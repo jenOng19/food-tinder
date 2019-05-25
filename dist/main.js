@@ -15362,6 +15362,56 @@ function App() {
 
 /***/ }),
 
+/***/ "./src/components/game/food-buttons.jsx":
+/*!**********************************************!*\
+  !*** ./src/components/game/food-buttons.jsx ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function FoodButtons(props) {
+  const {
+    choice
+  } = props;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "food__button"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    value: "korean",
+    className: "food1",
+    onClick: choice
+  }, "Korean Food"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    value: "mexican",
+    className: "food2",
+    onClick: choice
+  }, "Mexican Food"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    value: "american",
+    className: "food3",
+    onClick: choice
+  }, "American Food"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    value: "desert",
+    className: "desert",
+    onClick: choice
+  }, "Desert"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    value: "tea",
+    className: "desert",
+    onClick: choice
+  }, "Tea"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    value: "bar",
+    className: "drink",
+    onClick: choice
+  }, "Drink"));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (FoodButtons);
+
+/***/ }),
+
 /***/ "./src/components/game/game.css":
 /*!**************************************!*\
   !*** ./src/components/game/game.css ***!
@@ -15406,9 +15456,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _keys__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./keys */ "./src/components/game/keys.js");
-/* harmony import */ var _yelp_container_yelp_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../yelp-container/yelp-container */ "./src/components/yelp-container/yelp-container.jsx");
-/* harmony import */ var _game_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./game.css */ "./src/components/game/game.css");
-/* harmony import */ var _game_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_game_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../layout */ "./src/components/layout/index.jsx");
+/* harmony import */ var _food_buttons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./food-buttons */ "./src/components/game/food-buttons.jsx");
+/* harmony import */ var _yelp_container_yelp_container__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../yelp-container/yelp-container */ "./src/components/yelp-container/yelp-container.jsx");
+/* harmony import */ var _game_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./game.css */ "./src/components/game/game.css");
+/* harmony import */ var _game_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_game_css__WEBPACK_IMPORTED_MODULE_6__);
+
+
 
 
 
@@ -15505,7 +15559,7 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     const yelpData = [...this.state.yelp];
     const bracket = yelpData.slice(0, 2);
     const yelpBracket = bracket.map(business => {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_yelp_container_yelp_container__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_yelp_container_yelp_container__WEBPACK_IMPORTED_MODULE_5__["default"], {
         name: business.name,
         image: business.image_url,
         key: business.name,
@@ -15539,6 +15593,7 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
+<<<<<<< HEAD
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, !this.state.gameStart ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "search"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
@@ -15839,3 +15894,5 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 
 /******/ });
 //# sourceMappingURL=main.js.map
+=======
+>>>>>>> fd9f6b3626d381b0708416e51ae68bcf7a8c25f7
