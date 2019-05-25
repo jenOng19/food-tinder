@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import axios from "axios";
 import API_key from "./keys";
-import Header from '../layout';
+import Header from '../layout/header';
 import FoodChoiceButtons from './food-buttons';
 import YelpContainer from "../yelp-container/yelp-container";
 import './game.css';
@@ -134,7 +134,7 @@ class Game extends Component {
 
     render() {
       return (
-        <div>
+        <React.Fragment>
           <Header />
           {!this.state.gameStart ? <div className="search">
             <form className="search__form" onSubmit={this.handleSubmit}>
@@ -142,18 +142,20 @@ class Game extends Component {
                 search :
                 <input className = "input__form" type="text" value={this.state.search} onChange={this.handleChange} /><p className="error"></p>
                 <br/>
-            </label> 
+              </label> 
             </form>  
-            <FoodChoiceButtons choice={this.handleClick} />
+          <FoodChoiceButtons choice={this.handleClick} />
           </div> : null}
+          
           <div>
-            { this.state.yelp.length > 0 ? <h1>Round { this.state.round }</h1> : null}
+            { this.state.yelp.length > 0 ? 
+            <h1>Round { this.state.round }</h1> 
+            : null}
             <div className="section-container">{this.state.yelp ? this.renderYelpData():'loading'}</div>
             <button className={this.state.yelp.length>=1?'random-button':'hide'} onClick={this.handleRandomPick}>Pick for Me!</button>
             { this.state.bracket.length === 1 && <button>Reset</button>}
           </div>
-        </div>
-        
+        </React.Fragment>
       )
     }
 } 
