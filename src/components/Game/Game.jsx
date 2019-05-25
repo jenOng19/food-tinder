@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import axios from "axios";
 import API_key from "./keys";
+import Header from '../layout';
+import FoodChoiceButtons from './food-buttons';
 import YelpContainer from "../yelp-container/yelp-container";
 import './game.css';
 
@@ -125,6 +127,7 @@ class Game extends Component {
     render() {
       return (
         <div>
+          <Header />
           {!this.state.gameStart ? <div className="search">
             <form className="search__form" onSubmit={this.handleSubmit}>
               <label>
@@ -133,14 +136,7 @@ class Game extends Component {
                 <br/>
             </label> 
             </form>  
-            <div className="food__button">            
-              <button value="korean" className="food1" onClick={this.handleClick}>Korean Food</button>
-              <button value="mexican" className="food2" onClick={this.handleClick}>Mexican Food</button>
-              <button value="american" className="food3" onClick={this.handleClick}>American Food</button>
-              <button value="desert" className="desert" onClick={this.handleClick}>Desert</button>
-              <button value="tea" className="desert" onClick={this.handleClick}>Tea</button>
-              <button value="bar" className="drink" onClick={this.handleClick}>Drink</button>
-            </div>
+            <FoodChoiceButtons choice={this.handleClick} />
           </div> : null}
           <div>
             { this.state.yelp.length > 0 ? <h1>Round { this.state.round }</h1> : null}
