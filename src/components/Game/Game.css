@@ -41,3 +41,7 @@
 .desert {
     background-color: rgb(160, 212, 233);
 }
+
+.section-container{
+    margin-top:60px;
+}

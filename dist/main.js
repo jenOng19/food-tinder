@@ -1770,7 +1770,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap);", ""]);
 
 // Module
-exports.push([module.i, ".random-button{\r\n    background-color: slategray;\r\n    padding:5px;\r\n    border-radius: 5px;\r\n    border: 2px solid gray\r\n}\r\n.hide{\r\n    display: none;\r\n}\r\n\r\n.search {\r\n    text-align: center;\r\n    font-family: 'Merriweather Sans', sans-serif;\r\n}\r\n.input__form{\r\n    all: unset;\r\n    border: 1.5px solid rgb(180, 193, 228);\r\n    border-radius: 5px;\r\n    margin-top: 2px;\r\n    margin-bottom: 2px;\r\n}\r\n.food1, .food2, .food3, .desert, .drink {\r\n    all: unset;\r\n    font-size: 0.7rem;\r\n    border: 1px solid rgb(177, 182, 197);\r\n    border-radius: 5px;\r\n    padding: 3px;\r\n    margin-left: 2px;\r\n    box-shadow: 1px 1px 1px  #ccc;\r\n}\r\n.food1, .food2 {\r\n    background-color: orange;\r\n}\r\n.food3 {\r\n    background-color: rgb(238, 132, 173);\r\n}\r\n.drink {\r\n    background-color: rgb(212, 134, 243);\r\n}\r\n.desert {\r\n    background-color: rgb(160, 212, 233);\r\n}", ""]);
+exports.push([module.i, ".random-button{\n    background-color: slategray;\n    padding:5px;\n    border-radius: 5px;\n    border: 2px solid gray\n}\n.hide{\n    display: none;\n}\n\n.search {\n    text-align: center;\n    font-family: 'Merriweather Sans', sans-serif;\n}\n.input__form{\n    all: unset;\n    border: 1.5px solid rgb(180, 193, 228);\n    border-radius: 5px;\n    margin-top: 2px;\n    margin-bottom: 2px;\n}\n.food1, .food2, .food3, .desert, .drink {\n    all: unset;\n    font-size: 0.7rem;\n    border: 1px solid rgb(177, 182, 197);\n    border-radius: 5px;\n    padding: 3px;\n    margin-left: 2px;\n    box-shadow: 1px 1px 1px  #ccc;\n}\n.food1, .food2 {\n    background-color: orange;\n}\n.food3 {\n    background-color: rgb(238, 132, 173);\n}\n.drink {\n    background-color: rgb(212, 134, 243);\n}\n.desert {\n    background-color: rgb(160, 212, 233);\n}\n\n.section-container{\n    margin-top:60px;\n}", ""]);
 
 
 
@@ -1785,7 +1785,7 @@ exports.push([module.i, ".random-button{\r\n    background-color: slategray;\r\n
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, ".yelp-img{\r\n    height: 200px;\r\n    width: 200px;\r\n    cursor: pointer;\r\n}\r\n\r\n.yelp-name {\r\n    cursor: pointer;\r\n}\r\n\r\n.yelpInfoButton {\r\n    border: 1px solid red;\r\n    cursor: pointer;\r\n    display:inline-block;\r\n}\r\n\r\n.yelpMoreInfo {\r\n    opacity: 0;\r\n    visibility: hidden;\r\n    transition: all .5s;\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    bottom: 0;\r\n    background-color: rgba(0,0,0,.6);\r\n}\r\n\r\n.yelpMoreInfo.showInfo {\r\n    opacity: 1;\r\n    visibility: visible;\r\n}\r\n\r\n.yelpMoreInfoContent {\r\n    background-color: white;\r\n    width: 80%;\r\n    height: 80%;\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 50%;\r\n    transform: translate(-50%, -50%);\r\n}\r\n\r\n.yelpMoreInfoExit {\r\n    display: inline-block;\r\n    position: absolute;\r\n    top: 20px;\r\n    right: 20px;\r\n    width: 50px;\r\n    height: 50px;\r\n    background-color: white;\r\n}", ""]);
+exports.push([module.i, ".yelp-img{\n    height: 90%;\n    width: 100%;\n    cursor: pointer;\n    top: 50%;\n    left: 50%;\n    position: relative;\n    transform: translate(-50%, -50%);\n}\n\n.yelp-name, .yelp-reviews, .yelp-price{\n    margin-bottom:5px;\n}\n\n.yelpInfoButton{\n    color: rgba(255,0,0,1);\n}\n\n.yelp-name {\n    cursor: pointer;\n}\n\n.yelpInside{\n    height: 100%;\n    width:  100%;\n    position: relative;\n    left: 13%;\n}\n\n.yelpInfoButton {\n    /* border: 1px solid red; */\n    cursor: pointer;\n    display:inline-block;\n    border-radius: 5px;\n    background-color: white\n}\n\n.yelpMoreInfo {\n    opacity: 0;\n    visibility: hidden;\n    transition: all .5s;\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(0,0,0,.6);\n}\n\n.yelpMoreInfo.showInfo {\n    opacity: 1;\n    visibility: visible;\n}\n\n.yelpMoreInfoContent {\n    background-color: white;\n    width: 80%;\n    height: 80%;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n}\n\n.yelpMoreInfoExit {\n    display: inline-block;\n    position: absolute;\n    top: 20px;\n    right: 20px;\n    width: 50px;\n    height: 50px;\n    background-color: white;\n}\n\n/* .yelp{\n    width: 80vw;\n} */\n\n.yelpContainer{\n    height: 40vh;\n    width: 80%;\n    padding-bottom:10px;\n}\n\n.imgContainer{\n    height: 100%;\n    width: 100%;\n    background-size: cover;\n}\n\n.yelpInfo{\n    height:20%;\n    position: relative;\n    display: block;\n    background-image: linear-gradient(to bottom,  rgba(255,0,0,0), rgba(255,0,0,1));\n    margin-top: -150px;\n    height: 150px;\n    width: 100%;\n    color:white;\n}\n\n.info-container{\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%,-50%);\n    position: absolute;\n    text-align: center;\n    margin-top: 13px;\n    font-size: 18px;\n    width: 100%\n}\n\n/* .section-container{\n\n} */\n/* \n.yelpInfo::after{\n    display: block;\n    position: relative;\n    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #fff 100%);\n    margin-top: -150px;\n    height: 150px;\n    width: 100%;\n}  */", ""]);
 
 
 
@@ -15578,7 +15578,7 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "drink",
       onClick: this.handleClick
     }, "Drink"))) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.yelp.length > 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Round ", this.state.round) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "section__container"
+      className: "section-container"
     }, this.state.yelp ? this.renderYelpData() : 'loading'), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: this.state.yelp.length >= 1 ? 'random-button' : 'hide',
       onClick: this.handleRandomPick
@@ -15655,7 +15655,7 @@ class YelpContainer extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "yelpContainer"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "silver yelpInside"
+      className: "yelpInside"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "imgContainer"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -15665,6 +15665,8 @@ class YelpContainer extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       onClick: this.clickHandler
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "yelpInfo"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "info-container"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "yelp-name",
       onClick: this.clickHandler
@@ -15672,10 +15674,10 @@ class YelpContainer extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "yelp-reviews"
     }, "Rating: ", rating), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "yelp-price"
-    }, "Price: ", price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, "Price: ", price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "yelpInfoButton",
       onClick: this.showMoreInfo
-    }, "More Info"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, "More Info")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "yelpMoreInfo " + (this.state.showMoreInfo ? "showInfo" : null)
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "yelpMoreInfoExit",
