@@ -15526,11 +15526,7 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   handleSubmit(event) {
-<<<<<<< HEAD
-    event.preventDefault(); //
-=======
     event.preventDefault();
->>>>>>> eb86d4c857034eca1dd765dc19f359b4c8013b4e
   }
 
   handleClick(event) {
@@ -15543,11 +15539,7 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
-<<<<<<< HEAD
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-=======
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, !this.state.gameStart ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
->>>>>>> eb86d4c857034eca1dd765dc19f359b4c8013b4e
       className: "search"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
       className: "search__form",
@@ -15559,11 +15551,10 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       onChange: this.handleChange
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "error"
-<<<<<<< HEAD
-    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "food__button"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      value: "Korean",
+      value: "korean",
       className: "food1",
       onClick: this.handleClick
     }, "Korean Food"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -15571,27 +15562,10 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "food2",
       onClick: this.handleClick
     }, "Mexican Food"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      value: "restaurant",
+      value: "american",
       className: "food3",
       onClick: this.handleClick
-    }, "restaurants"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-=======
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "food__button"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      value: "korean",
-      className: "food",
-      onClick: this.handleClick
-    }, "Korean Food"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      value: "mexican",
-      className: "drink",
-      onClick: this.handleClick
-    }, "Mexican Food"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      value: "american",
-      className: "drink",
-      onClick: this.handleClick
     }, "American Food"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
->>>>>>> eb86d4c857034eca1dd765dc19f359b4c8013b4e
       value: "desert",
       className: "desert",
       onClick: this.handleClick
@@ -15603,11 +15577,7 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       value: "bar",
       className: "drink",
       onClick: this.handleClick
-<<<<<<< HEAD
-    }, "Drink")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-=======
     }, "Drink"))) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.yelp.length > 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Round ", this.state.round) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
->>>>>>> eb86d4c857034eca1dd765dc19f359b4c8013b4e
       className: "section__container"
     }, this.state.yelp ? this.renderYelpData() : 'loading'), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: this.state.yelp.length >= 1 ? 'random-button' : 'hide',
