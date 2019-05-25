@@ -1,17 +1,38 @@
 .yelp-img{
-    height: 200px;
-    width: 200px;
+    height: 90%;
+    width: 100%;
     cursor: pointer;
+    top: 50%;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%, -50%);
+}
+
+.yelp-name, .yelp-reviews, .yelp-price{
+    margin-bottom:5px;
+}
+
+.yelpInfoButton{
+    color: rgba(255,0,0,1);
 }
 
 .yelp-name {
     cursor: pointer;
 }
 
+.yelpInside{
+    height: 100%;
+    width:  100%;
+    position: relative;
+    left: 13%;
+}
+
 .yelpInfoButton {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     cursor: pointer;
     display:inline-block;
+    border-radius: 5px;
+    background-color: white
 }
 
 .yelpMoreInfo {
@@ -50,3 +71,54 @@
     height: 50px;
     background-color: white;
 }
+
+/* .yelp{
+    width: 80vw;
+} */
+
+.yelpContainer{
+    height: 40vh;
+    width: 80%;
+    padding-bottom:10px;
+}
+
+.imgContainer{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+.yelpInfo{
+    height:20%;
+    position: relative;
+    display: block;
+    background-image: linear-gradient(to bottom,  rgba(255,0,0,0), rgba(255,0,0,1));
+    margin-top: -150px;
+    height: 150px;
+    width: 100%;
+    color:white;
+}
+
+.info-container{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    text-align: center;
+    margin-top: 13px;
+    font-size: 18px;
+    width: 100%
+}
+
+/* .section-container{
+
+} */
+/* 
+.yelpInfo::after{
+    display: block;
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #fff 100%);
+    margin-top: -150px;
+    height: 150px;
+    width: 100%;
+}  */

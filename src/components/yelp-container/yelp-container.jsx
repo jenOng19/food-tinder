@@ -25,17 +25,20 @@ class YelpContainer extends Component {
 	render() {
 		const { name, image, rating, price } = this.props;
 		return (
-			<div >
+			<div>
 				<div className="yelpContainer">
-					<div className="silver yelpInside">
+					{/* <div className="silver yelpInside"> */}
+					<div className="yelpInside">
 						<div className="imgContainer">
 							<img src={image} alt={name} className="yelp-img" onClick={this.clickHandler} />
 						</div>
 						<div className="yelpInfo">
-							<p className="yelp-name" onClick={this.clickHandler}>{name}</p>
-							<p className="yelp-reviews">Rating: {rating}</p>
-							<p className="yelp-price">Price: {price}</p>
-							<div className="yelpInfoButton" onClick={this.showMoreInfo}>More Info</div>
+							<div className="info-container">
+								<p className="yelp-name" onClick={this.clickHandler}>{name}</p>
+								<p className="yelp-reviews">Rating: {rating}</p>
+								<p className="yelp-price">Price: {price}</p>
+								<button className="yelpInfoButton" onClick={this.showMoreInfo}>More Info</button>
+							</div>
 						</div>
 					</div>
 

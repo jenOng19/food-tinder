@@ -144,7 +144,7 @@ class Game extends Component {
           </div> : null}
           <div>
             { this.state.yelp.length > 0 ? <h1>Round { this.state.round }</h1> : null}
-            <div className="section__container">{this.state.yelp ? this.renderYelpData():'loading'}</div>
+            <div className="section-container">{this.state.yelp ? this.renderYelpData():'loading'}</div>
             <button className={this.state.yelp.length>=1?'random-button':'hide'} onClick={this.handleRandomPick}>Pick for Me!</button>
             { this.state.bracket.length === 1 && <button>Reset</button>}
           </div>
