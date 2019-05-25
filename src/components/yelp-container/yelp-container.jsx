@@ -27,7 +27,6 @@ class YelpContainer extends Component {
 		return (
 			<div>
 				<div className="yelpContainer">
-					{/* <div className="silver yelpInside"> */}
 					<div className="yelpInside">
 						<div className="imgContainer">
 							<img src={image} alt={name} className="yelp-img" onClick={this.clickHandler} />
@@ -43,7 +42,7 @@ class YelpContainer extends Component {
 					</div>
 
 					<div className={"yelpMoreInfo " + (this.state.showMoreInfo ? "showInfo" : null) }>
-						<div className="yelpMoreInfoExit" onClick={this.showMoreInfo}>X</div>
+						<div className="yelpMoreInfoExit" onClick={this.showMoreInfo}><i className="fas fa-angle-double-left fa-2x"></i></div>
 						<div className="yelpMoreInfoContent">
 							<YelpMoreInfo id={this.props.id} />
 						</div>

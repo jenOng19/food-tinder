@@ -1770,7 +1770,11 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap);", ""]);
 
 // Module
+<<<<<<< HEAD
 exports.push([module.i, ".random-button{\n    background-color: slategray;\n    padding:5px;\n    border-radius: 5px;\n    border: 2px solid gray\n}\n.hide{\n    display: none;\n}\n\n.search {\n    text-align: center;\n    font-family: 'Merriweather Sans', sans-serif;\n}\n.input__form{\n    all: unset;\n    border: 1.5px solid rgb(180, 193, 228);\n    border-radius: 5px;\n    margin-top: 2px;\n    margin-bottom: 2px;\n}\n.food1, .food2, .food3, .desert, .drink {\n    all: unset;\n    font-size: 0.7rem;\n    border: 1px solid rgb(177, 182, 197);\n    border-radius: 5px;\n    padding: 3px;\n    margin-left: 2px;\n    box-shadow: 1px 1px 1px  #ccc;\n}\n.food1, .food2 {\n    background-color: orange;\n}\n.food3 {\n    background-color: rgb(238, 132, 173);\n}\n.drink {\n    background-color: rgb(212, 134, 243);\n}\n.desert {\n    background-color: rgb(160, 212, 233);\n}\n\n.section-container{\n    margin-top:60px;\n}", ""]);
+=======
+exports.push([module.i, ".random-button{\n    background-color: slategray;\n    padding:5px;\n    border-radius: 5px;\n    border: 2px solid gray\n}\n.hide{\n    display: none;\n}\n\n.search {\n    text-align: center;\n    font-family: 'Merriweather Sans', sans-serif;\n}\n.input__form{\n    all: unset;\n    border: 1.5px solid rgb(180, 193, 228);\n    border-radius: 5px;\n    margin-top: 2px;\n    margin-bottom: 2px;\n}\n.food1, .food2, .food3, .desert, .drink {\n    all: unset;\n    font-size: 0.7rem;\n    border: 1px solid rgb(177, 182, 197);\n    border-radius: 5px;\n    padding: 3px;\n    margin-left: 2px;\n    box-shadow: 1px 1px 1px  #ccc;\n}\n.food1, .food2 {\n    background-color: orange;\n}\n.food3 {\n    background-color: rgb(238, 132, 173);\n}\n.drink {\n    background-color: rgb(212, 134, 243);\n}\n.desert {\n    background-color: rgb(160, 212, 233);\n}", ""]);
+>>>>>>> bb88c767df9a289d00f00bf8f95576b8e484b956
 
 
 
@@ -1785,7 +1789,11 @@ exports.push([module.i, ".random-button{\n    background-color: slategray;\n    
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
+<<<<<<< HEAD
 exports.push([module.i, ".yelp-img{\n    height: 90%;\n    width: 100%;\n    cursor: pointer;\n    top: 50%;\n    left: 50%;\n    position: relative;\n    transform: translate(-50%, -50%);\n}\n\n.yelp-name, .yelp-reviews, .yelp-price{\n    margin-bottom:5px;\n}\n\n.yelpInfoButton{\n    color: rgba(255,0,0,1);\n}\n\n.yelp-name {\n    cursor: pointer;\n}\n\n.yelpInside{\n    height: 100%;\n    width:  100%;\n    position: relative;\n    left: 13%;\n}\n\n.yelpInfoButton {\n    /* border: 1px solid red; */\n    cursor: pointer;\n    display:inline-block;\n    border-radius: 5px;\n    background-color: white\n}\n\n.yelpMoreInfo {\n    opacity: 0;\n    visibility: hidden;\n    transition: all .5s;\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(0,0,0,.6);\n}\n\n.yelpMoreInfo.showInfo {\n    opacity: 1;\n    visibility: visible;\n}\n\n.yelpMoreInfoContent {\n    background-color: white;\n    width: 80%;\n    height: 80%;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n}\n\n.yelpMoreInfoExit {\n    display: inline-block;\n    position: absolute;\n    top: 20px;\n    right: 20px;\n    width: 50px;\n    height: 50px;\n    background-color: white;\n}\n\n/* .yelp{\n    width: 80vw;\n} */\n\n.yelpContainer{\n    height: 40vh;\n    width: 80%;\n    padding-bottom:10px;\n}\n\n.imgContainer{\n    height: 100%;\n    width: 100%;\n    background-size: cover;\n}\n\n.yelpInfo{\n    height:20%;\n    position: relative;\n    display: block;\n    background-image: linear-gradient(to bottom,  rgba(255,0,0,0), rgba(255,0,0,1));\n    margin-top: -150px;\n    height: 150px;\n    width: 100%;\n    color:white;\n}\n\n.info-container{\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%,-50%);\n    position: absolute;\n    text-align: center;\n    margin-top: 13px;\n    font-size: 18px;\n    width: 100%\n}\n\n/* .section-container{\n\n} */\n/* \n.yelpInfo::after{\n    display: block;\n    position: relative;\n    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #fff 100%);\n    margin-top: -150px;\n    height: 150px;\n    width: 100%;\n}  */", ""]);
+=======
+exports.push([module.i, ".yelp-img{\n    height: 200px;\n    width: 200px;\n    cursor: pointer;\n}\n\n.yelp-name {\n    cursor: pointer;\n}\n\n.yelpInfoButton {\n    border: 1px solid red;\n    cursor: pointer;\n    display:inline-block;\n}\n\n.yelpMoreInfo {\n    opacity: 0;\n    visibility: hidden;\n    transition: all .5s;\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(0,0,0,.6);\n}\n\n.yelpMoreInfo.showInfo {\n    opacity: 1;\n    visibility: visible;\n}\n\n.yelpMoreInfoContent {\n    background-color: white;\n    width: 80%;\n    height: 80%;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    border-radius: 10px;\n}\n\n.yelpMoreInfoExit {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    position: absolute;\n    top: 20px;\n    right: 20px;\n    width: 50px;\n    height: 50px;\n    background-color: white;\n    border-radius: 100px;\n    background-color: rgba(227, 227, 227, .8);\n}\n\n/* MODAL SECTION */\n\n.modalContainer {\n    text-align: center;\n    height: 100%;\n    border-radius: 10px;\n    border-top-left-radius: 10px;\n    border-top-right-radius: 10px;\n}\n\n.modalBody {\n    padding-top: 50px;\n    height: 50%;\n    position: relative;\n    background: rgb(253,132,29);\n    background: linear-gradient(0deg, rgba(247, 179, 76, .2) 1%, rgba(247, 201, 63, .5) 70%);\n}\n\n.modalName {\n    font-size: 1.5em;\n    font-family: 'Arimo', sans-serif;\n}\n\n.modalInfo {\n    margin: 20px;\n    font-size: 1.2rem;\n    font-family: 'Arimo', sans-serif;\n}\n\n.modalPicContainer {\n    height: 50%;\n    position: relative;\n}\n\n.slickPics {\n    height: 40vh;\n    border-top-left-radius: 10px;\n    border-top-right-radius: 10px;\n}\n\n.reviewCount {\n    color: rgb(114, 114, 114);\n}", ""]);
+>>>>>>> bb88c767df9a289d00f00bf8f95576b8e484b956
 
 
 
@@ -15461,6 +15469,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _yelp_container_yelp_container__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../yelp-container/yelp-container */ "./src/components/yelp-container/yelp-container.jsx");
 /* harmony import */ var _game_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./game.css */ "./src/components/game/game.css");
 /* harmony import */ var _game_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_game_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _data_yelpdata__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../data/yelpdata */ "./src/data/yelpdata.js");
+
 
 
 
@@ -15496,34 +15506,43 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   yelpDate(location) {
-    axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/search?location=${location}`, {
-      headers: {
-        Authorization: `Bearer ${_keys__WEBPACK_IMPORTED_MODULE_2__["default"]}`
-      },
-      params: {
-        term: this.state.param,
-        limit: 8
-      }
-    }).then(res => {
-      this.setState({
-        yelp: res.data.businesses,
-        round: this.state.round + 1,
-        gameStart: true
-      }, () => {
-        this.limit = this.state.yelp.length / 2;
-      });
-    }).catch(err => {
-      this.setState({
-        error: true
-      });
-      console.log('error');
+    // FETCH REQUEST
+    // axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/search?location=${location}`, {
+    // headers: {
+    //   Authorization: `Bearer ${API_key}`
+    // },
+    // params: {
+    //   term : this.state.param,
+    //   limit: 8
+    // }
+    // })
+    // .then((res) => {
+    //   this.setState({
+    //     yelp: res.data.businesses,
+    //     round: this.state.round + 1,
+    //     gameStart: true
+    //   }, () => {
+    //     this.limit = this.state.yelp.length / 2
+    //   })
+    // })
+    // .catch((err) => {
+    //   this.setState({error: true})
+    //   console.log ('error')
+    // }) 
+    // DUMMY DATA TEST
+    console.log(_data_yelpdata__WEBPACK_IMPORTED_MODULE_7__["default"]);
+    this.setState({
+      yelp: _data_yelpdata__WEBPACK_IMPORTED_MODULE_7__["default"].businesses,
+      round: this.state.round + 1,
+      gameStart: true
+    }, () => {
+      this.limit = this.state.yelp.length / 2;
     });
   }
 
   handleRandomPick() {
     const yelpData = [...this.state.yelp];
     const bracket = yelpData.slice(0, 2);
-    console.log('bracket', bracket);
     const pick = Math.floor(Math.random() * 2);
     this.clickHandler(bracket[pick].id);
   }
@@ -15540,7 +15559,6 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   nextRound() {
-    console.log(this.state);
     if (this.state.bracket.length === this.limit) return this.state.bracket.length === 1 && this.state.yelp.length === 0 ? this.setState({
       yelp: [...this.state.bracket],
       bracket: [],
@@ -15555,7 +15573,6 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   renderYelpData() {
-    console.log('this.state.yelp :', this.state.yelp);
     const yelpData = [...this.state.yelp];
     const bracket = yelpData.slice(0, 2);
     const yelpBracket = bracket.map(business => {
@@ -15576,7 +15593,6 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     this.setState({
       search: event.target.value
     });
-    console.log('this.state after change :', this.state);
   }
 
   handleSubmit(event) {
@@ -15594,7 +15610,11 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
   render() {
 <<<<<<< HEAD
+<<<<<<< HEAD
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, !this.state.gameStart ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+=======
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_layout__WEBPACK_IMPORTED_MODULE_3__["default"], null), !this.state.gameStart ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+>>>>>>> bb88c767df9a289d00f00bf8f95576b8e484b956
       className: "search"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
       className: "search__form",
@@ -15606,6 +15626,7 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       onChange: this.handleChange
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "error"
+<<<<<<< HEAD
     }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "food__button"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -15634,6 +15655,12 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       onClick: this.handleClick
     }, "Drink"))) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.yelp.length > 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Round ", this.state.round) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "section-container"
+=======
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_food_buttons__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      choice: this.handleClick
+    })) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.yelp.length > 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Round ", this.state.round) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "section__container"
+>>>>>>> bb88c767df9a289d00f00bf8f95576b8e484b956
     }, this.state.yelp ? this.renderYelpData() : 'loading'), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: this.state.yelp.length >= 1 ? 'random-button' : 'hide',
       onClick: this.handleRandomPick
@@ -15655,13 +15682,46 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+<<<<<<< HEAD
 let API_key = 'Y4noU6PPXhBRFrqRgmv-bnpO09SHmLhp9vUbmbrOJlak2Wy9MvFj7i3elJbFn4l9UX82yo9E6iTIXUvLdIaEieEGW2Ok3RBuGip8HueeUcjX2Uw63k3nydopXDLHXHYx'; // 'xNeotD9tXeETUfPpNuEbideztro4aK18Kh8IcerVAD54yGmkRg-PZdYhlBQPzgDg8SuyJJPVp__6Zw73QyvLp2OgmaaTap_Rc1Z7EX3ylcLFHhRiHzNBFNhPdo6_XHYx';
+=======
+let API_key = 'xNeotD9tXeETUfPpNuEbideztro4aK18Kh8IcerVAD54yGmkRg-PZdYhlBQPzgDg8SuyJJPVp__6Zw73QyvLp2OgmaaTap_Rc1Z7EX3ylcLFHhRiHzNBFNhPdo6_XHYx'; // 'xNeotD9tXeETUfPpNuEbideztro4aK18Kh8IcerVAD54yGmkRg-PZdYhlBQPzgDg8SuyJJPVp__6Zw73QyvLp2OgmaaTap_Rc1Z7EX3ylcLFHhRiHzNBFNhPdo6_XHYx';
+>>>>>>> bb88c767df9a289d00f00bf8f95576b8e484b956
 //kate's :'Y4noU6PPXhBRFrqRgmv-bnpO09SHmLhp9vUbmbrOJlak2Wy9MvFj7i3elJbFn4l9UX82yo9E6iTIXUvLdIaEieEGW2Ok3RBuGip8HueeUcjX2Uw63k3nydopXDLHXHYx';
 
 /* harmony default export */ __webpack_exports__["default"] = (API_key);
 
 /***/ }),
 
+<<<<<<< HEAD
+=======
+/***/ "./src/components/layout/index.jsx":
+/*!*****************************************!*\
+  !*** ./src/components/layout/index.jsx ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+function Header() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "header"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Food Tournament"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Choose one pic that you like more"));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Header);
+
+/***/ }),
+
+>>>>>>> bb88c767df9a289d00f00bf8f95576b8e484b956
 /***/ "./src/components/yelp-container/yelp-container.jsx":
 /*!**********************************************************!*\
   !*** ./src/components/yelp-container/yelp-container.jsx ***!
@@ -15710,7 +15770,11 @@ class YelpContainer extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "yelpContainer"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+<<<<<<< HEAD
       className: "yelpInside"
+=======
+      className: "silver yelpInside"
+>>>>>>> bb88c767df9a289d00f00bf8f95576b8e484b956
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "imgContainer"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -15720,8 +15784,11 @@ class YelpContainer extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       onClick: this.clickHandler
     })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "yelpInfo"
+<<<<<<< HEAD
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "info-container"
+=======
+>>>>>>> bb88c767df9a289d00f00bf8f95576b8e484b956
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "yelp-name",
       onClick: this.clickHandler
@@ -15729,15 +15796,28 @@ class YelpContainer extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "yelp-reviews"
     }, "Rating: ", rating), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "yelp-price"
+<<<<<<< HEAD
     }, "Price: ", price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "yelpInfoButton",
       onClick: this.showMoreInfo
     }, "More Info")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+=======
+    }, "Price: ", price), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "yelpInfoButton",
+      onClick: this.showMoreInfo
+    }, "More Info"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+>>>>>>> bb88c767df9a289d00f00bf8f95576b8e484b956
       className: "yelpMoreInfo " + (this.state.showMoreInfo ? "showInfo" : null)
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "yelpMoreInfoExit",
       onClick: this.showMoreInfo
+<<<<<<< HEAD
     }, "X"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+=======
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fas fa-angle-double-left fa-2x"
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+>>>>>>> bb88c767df9a289d00f00bf8f95576b8e484b956
       className: "yelpMoreInfoContent"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_yelpMoreInfo__WEBPACK_IMPORTED_MODULE_1__["default"], {
       id: this.props.id
@@ -15796,6 +15876,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _game_keys__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../game/keys */ "./src/components/game/keys.js");
 /* harmony import */ var react_slick__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-slick */ "./node_modules/react-slick/lib/index.js");
 /* harmony import */ var react_slick__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_slick__WEBPACK_IMPORTED_MODULE_3__);
+<<<<<<< HEAD
+=======
+/* harmony import */ var _data_yelp_business_data__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../data/yelp-business-data */ "./src/data/yelp-business-data.js");
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+
+>>>>>>> bb88c767df9a289d00f00bf8f95576b8e484b956
 
 
 
@@ -15816,6 +15903,7 @@ class YelpMoreInfo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   getYelpPics() {
+<<<<<<< HEAD
     console.log("this data: ", this.state.data);
     let picArray = this.state.pictures.map(x => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       key: x,
@@ -15823,10 +15911,18 @@ class YelpMoreInfo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       src: x
     })));
+=======
+    let picArray = this.state.pictures.map((x, index) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      key: index,
+      className: "slickPics",
+      src: x
+    }));
+>>>>>>> bb88c767df9a289d00f00bf8f95576b8e484b956
     return picArray;
   }
 
   componentDidMount() {
+<<<<<<< HEAD
     axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/${this.props.id}`, {
       headers: {
         Authorization: `Bearer ${_game_keys__WEBPACK_IMPORTED_MODULE_2__["default"]}`
@@ -15860,6 +15956,99 @@ class YelpMoreInfo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     }, "Visit Yelp Page")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Pics:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       id: "yelpMorePics"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_slick__WEBPACK_IMPORTED_MODULE_3___default.a, settings, this.getYelpPics()))));
+=======
+    //FETCH REQUEST
+    // axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/${ this.props.id }`, {
+    // headers: {
+    //   Authorization: `Bearer ${API_key}`
+    // }
+    // })
+    // .then((res) => {
+    //   console.log( 'res', res )
+    //   this.setState({
+    //     data: res.data,
+    //     pictures: res.data.photos,
+    //     name: res.data.name,
+    //     phone: res.data.display_phone,
+    //     rating: res.data.rating,
+    //     review_count: res.data.review_count,
+    //     url: res.data.url
+    //   })
+    // })
+    // .catch((err) => {
+    //   console.log ('error')
+    // })  
+    //  ------ Dummy Data Test -------
+    this.setState({
+      data: _data_yelp_business_data__WEBPACK_IMPORTED_MODULE_4__["default"],
+      pictures: _data_yelp_business_data__WEBPACK_IMPORTED_MODULE_4__["default"].photos,
+      name: _data_yelp_business_data__WEBPACK_IMPORTED_MODULE_4__["default"].name,
+      phone: _data_yelp_business_data__WEBPACK_IMPORTED_MODULE_4__["default"].display_phone,
+      rating: _data_yelp_business_data__WEBPACK_IMPORTED_MODULE_4__["default"].rating,
+      review_count: _data_yelp_business_data__WEBPACK_IMPORTED_MODULE_4__["default"].review_count,
+      url: _data_yelp_business_data__WEBPACK_IMPORTED_MODULE_4__["default"].url
+    });
+  }
+
+  starRating() {
+    const baseRate = Math.floor(this.state.rating);
+    let rating = [];
+
+    for (let index = 0; index < baseRate; index++) {
+      rating.push(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        key: index,
+        className: "fas fa-star"
+      }));
+    }
+
+    if (this.state.rating % 1 !== 0) {
+      rating.push(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        key: rating.length,
+        className: "fas fa-star-half"
+      }));
+    }
+
+    if (rating.length !== 5) {
+      rating.push(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        key: rating.length,
+        className: "far fa-star"
+      }));
+    }
+
+    return rating;
+  }
+
+  render() {
+    var settings = {
+      dots: false,
+      infinite: true,
+      fade: true,
+      speed: 200,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "modalContainer"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "modalPicContainer"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_slick__WEBPACK_IMPORTED_MODULE_3___default.a, _extends({
+      className: "slickClass"
+    }, settings), this.getYelpPics())), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "modalBody"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "modalName"
+    }, this.state.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "modalInfo"
+    }, "Rating: ", this.starRating(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "reviewCount"
+    }, "(", this.state.review_count, ")")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "modalInfo"
+    }, "Phone: ", this.state.phone), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "modalInfo"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: this.state.url
+    }, "Visit Yelp Page"))));
+>>>>>>> bb88c767df9a289d00f00bf8f95576b8e484b956
   }
 
 }
@@ -15868,6 +16057,439 @@ class YelpMoreInfo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
+<<<<<<< HEAD
+=======
+/***/ "./src/data/yelp-business-data.js":
+/*!****************************************!*\
+  !*** ./src/data/yelp-business-data.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const yelpBusData = {
+  "id": "rNRq1qKhIuheb-KyW7jN4g",
+  "alias": "handels-homemade-ice-cream-carlsbad",
+  "name": "Handel's Homemade Ice Cream",
+  "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/dVdKeBba8JZrq_ak7DxWUA/o.jpg",
+  "is_claimed": true,
+  "is_closed": false,
+  "url": "https://www.yelp.com/biz/handels-homemade-ice-cream-carlsbad?adjust_creative=CEHOX1F-5vd1oNht-mVSRg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=CEHOX1F-5vd1oNht-mVSRg",
+  "phone": "+17606963519",
+  "display_phone": "(760) 696-3519",
+  "review_count": 86,
+  "categories": [{
+    "alias": "desserts",
+    "title": "Desserts"
+  }, {
+    "alias": "icecream",
+    "title": "Ice Cream & Frozen Yogurt"
+  }],
+  "rating": 4.5,
+  "location": {
+    "address1": "2825 State St",
+    "address2": "",
+    "address3": null,
+    "city": "Carlsbad",
+    "zip_code": "92008",
+    "country": "US",
+    "state": "CA",
+    "display_address": ["2825 State St", "Carlsbad, CA 92008"],
+    "cross_streets": "Christiansen Way & Grand Ave"
+  },
+  "coordinates": {
+    "latitude": 33.16107,
+    "longitude": -117.35023
+  },
+  "photos": ["https://s3-media4.fl.yelpcdn.com/bphoto/dVdKeBba8JZrq_ak7DxWUA/o.jpg", "https://s3-media3.fl.yelpcdn.com/bphoto/DL9eoulCYUaAeAeR-VPfuw/o.jpg", "https://s3-media1.fl.yelpcdn.com/bphoto/zL7MySrq6646IRztyqnXZg/o.jpg"],
+  "price": "$",
+  "hours": [{
+    "open": [{
+      "is_overnight": false,
+      "start": "1100",
+      "end": "2200",
+      "day": 0
+    }, {
+      "is_overnight": false,
+      "start": "1100",
+      "end": "2200",
+      "day": 1
+    }, {
+      "is_overnight": false,
+      "start": "1100",
+      "end": "2200",
+      "day": 2
+    }, {
+      "is_overnight": false,
+      "start": "1100",
+      "end": "2200",
+      "day": 3
+    }, {
+      "is_overnight": false,
+      "start": "1100",
+      "end": "2200",
+      "day": 4
+    }, {
+      "is_overnight": false,
+      "start": "1100",
+      "end": "2200",
+      "day": 5
+    }, {
+      "is_overnight": false,
+      "start": "1100",
+      "end": "2200",
+      "day": 6
+    }],
+    "hours_type": "REGULAR",
+    "is_open_now": true
+  }],
+  "transactions": [],
+  "messaging": {
+    "url": "https://www.yelp.com/raq/handels-homemade-ice-cream-carlsbad?adjust_creative=CEHOX1F-5vd1oNht-mVSRg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=CEHOX1F-5vd1oNht-mVSRg#popup%3Araq",
+    "use_case_text": "Message the Business"
+  },
+  "special_hours": [{
+    "date": "2019-11-28",
+    "is_closed": true,
+    "start": null,
+    "end": null,
+    "is_overnight": null
+  }, {
+    "date": "2019-11-29",
+    "is_closed": true,
+    "start": null,
+    "end": null,
+    "is_overnight": null
+  }, {
+    "date": "2019-12-25",
+    "is_closed": true,
+    "start": null,
+    "end": null,
+    "is_overnight": null
+  }, {
+    "date": "2019-12-26",
+    "is_closed": true,
+    "start": null,
+    "end": null,
+    "is_overnight": null
+  }]
+};
+/* harmony default export */ __webpack_exports__["default"] = (yelpBusData);
+
+/***/ }),
+
+/***/ "./src/data/yelpdata.js":
+/*!******************************!*\
+  !*** ./src/data/yelpdata.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const yelpFakeApi = {
+  "businesses": [{
+    "id": "rNRq1qKhIuheb-KyW7jN4g",
+    "alias": "handels-homemade-ice-cream-carlsbad",
+    "name": "Handel's Homemade Ice Cream",
+    "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/dVdKeBba8JZrq_ak7DxWUA/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/handels-homemade-ice-cream-carlsbad?adjust_creative=CEHOX1F-5vd1oNht-mVSRg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=CEHOX1F-5vd1oNht-mVSRg",
+    "review_count": 86,
+    "categories": [{
+      "alias": "desserts",
+      "title": "Desserts"
+    }, {
+      "alias": "icecream",
+      "title": "Ice Cream & Frozen Yogurt"
+    }],
+    "rating": 4.5,
+    "coordinates": {
+      "latitude": 33.16107,
+      "longitude": -117.35023
+    },
+    "transactions": [],
+    "price": "$",
+    "location": {
+      "address1": "2825 State St",
+      "address2": "",
+      "address3": null,
+      "city": "Carlsbad",
+      "zip_code": "92008",
+      "country": "US",
+      "state": "CA",
+      "display_address": ["2825 State St", "Carlsbad, CA 92008"]
+    },
+    "phone": "+17606963519",
+    "display_phone": "(760) 696-3519",
+    "distance": 7192.7584353340335
+  }, {
+    "id": "p48RoXvB6So_VT7t3VJUbA",
+    "alias": "harumama-noodles-and-buns-carlsbad",
+    "name": "Harumama Noodles & Buns",
+    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/X0oSeEmkrDiObhh-9yzifw/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/harumama-noodles-and-buns-carlsbad?adjust_creative=CEHOX1F-5vd1oNht-mVSRg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=CEHOX1F-5vd1oNht-mVSRg",
+    "review_count": 339,
+    "categories": [{
+      "alias": "ramen",
+      "title": "Ramen"
+    }, {
+      "alias": "asianfusion",
+      "title": "Asian Fusion"
+    }],
+    "rating": 4,
+    "coordinates": {
+      "latitude": 33.161535,
+      "longitude": -117.346864
+    },
+    "transactions": ["pickup"],
+    "price": "$$",
+    "location": {
+      "address1": "2958 Madison St",
+      "address2": "",
+      "address3": null,
+      "city": "Carlsbad",
+      "zip_code": "92008",
+      "country": "US",
+      "state": "CA",
+      "display_address": ["2958 Madison St", "Carlsbad, CA 92008"]
+    },
+    "phone": "+17607207874",
+    "display_phone": "(760) 720-7874",
+    "distance": 6978.754230479254
+  }, {
+    "id": "eIUd0dPpd-8oWIQu2ch9gw",
+    "alias": "campfire-carlsbad-2",
+    "name": "Campfire",
+    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/kBP5OKL2xa7a4tU1gieeMA/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/campfire-carlsbad-2?adjust_creative=CEHOX1F-5vd1oNht-mVSRg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=CEHOX1F-5vd1oNht-mVSRg",
+    "review_count": 1398,
+    "categories": [{
+      "alias": "newamerican",
+      "title": "American (New)"
+    }],
+    "rating": 4.5,
+    "coordinates": {
+      "latitude": 33.16199,
+      "longitude": -117.35105
+    },
+    "transactions": [],
+    "price": "$$",
+    "location": {
+      "address1": "2725 State St",
+      "address2": "",
+      "address3": null,
+      "city": "Carlsbad",
+      "zip_code": "92008",
+      "country": "US",
+      "state": "CA",
+      "display_address": ["2725 State St", "Carlsbad, CA 92008"]
+    },
+    "phone": "+17606375121",
+    "display_phone": "(760) 637-5121",
+    "distance": 7319.707442026052
+  }, {
+    "id": "vUEGW7OWY-5UZISJ_16QbA",
+    "alias": "crackheads-carlsbad",
+    "name": "Crackheads",
+    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/tQ9nJ8e3_i_RaVMCE-8L1A/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/crackheads-carlsbad?adjust_creative=CEHOX1F-5vd1oNht-mVSRg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=CEHOX1F-5vd1oNht-mVSRg",
+    "review_count": 140,
+    "categories": [{
+      "alias": "cocktailbars",
+      "title": "Cocktail Bars"
+    }, {
+      "alias": "breakfast_brunch",
+      "title": "Breakfast & Brunch"
+    }, {
+      "alias": "tradamerican",
+      "title": "American (Traditional)"
+    }],
+    "rating": 4,
+    "coordinates": {
+      "latitude": 33.1593944578992,
+      "longitude": -117.349194973675
+    },
+    "transactions": [],
+    "location": {
+      "address1": "430 Carlsbad Village Dr",
+      "address2": "",
+      "address3": null,
+      "city": "Carlsbad",
+      "zip_code": "92008",
+      "country": "US",
+      "state": "CA",
+      "display_address": ["430 Carlsbad Village Dr", "Carlsbad, CA 92008"]
+    },
+    "phone": "",
+    "display_phone": "",
+    "distance": 7008.887951551446
+  }, {
+    "id": "9AJfO9Y3ObUZjqDS6LNW1g",
+    "alias": "board-and-brew-carlsbad-village-carlsbad",
+    "name": "Board & Brew - Carlsbad Village",
+    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/81gjco-FbCgGmrrvjTfyCg/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/board-and-brew-carlsbad-village-carlsbad?adjust_creative=CEHOX1F-5vd1oNht-mVSRg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=CEHOX1F-5vd1oNht-mVSRg",
+    "review_count": 740,
+    "categories": [{
+      "alias": "sandwiches",
+      "title": "Sandwiches"
+    }, {
+      "alias": "beerbar",
+      "title": "Beer Bar"
+    }, {
+      "alias": "cafes",
+      "title": "Cafes"
+    }],
+    "rating": 4.5,
+    "coordinates": {
+      "latitude": 33.1566912,
+      "longitude": -117.3502563
+    },
+    "transactions": [],
+    "price": "$",
+    "location": {
+      "address1": "201 Oak Ave",
+      "address2": null,
+      "address3": "",
+      "city": "Carlsbad",
+      "zip_code": "92008",
+      "country": "US",
+      "state": "CA",
+      "display_address": ["201 Oak Ave", "Carlsbad, CA 92008"]
+    },
+    "phone": "+17604344466",
+    "display_phone": "(760) 434-4466",
+    "distance": 6912.3078991463835
+  }, {
+    "id": "qWqcvhQLZ82h60SsJLGZ3A",
+    "alias": "beach-plum-kitchen-carlsbad-2",
+    "name": "Beach Plum Kitchen",
+    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/FI4TReSs3CWqm_2BSQ9SCg/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/beach-plum-kitchen-carlsbad-2?adjust_creative=CEHOX1F-5vd1oNht-mVSRg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=CEHOX1F-5vd1oNht-mVSRg",
+    "review_count": 1404,
+    "categories": [{
+      "alias": "newamerican",
+      "title": "American (New)"
+    }, {
+      "alias": "breakfast_brunch",
+      "title": "Breakfast & Brunch"
+    }],
+    "rating": 4.5,
+    "coordinates": {
+      "latitude": 33.104408,
+      "longitude": -117.267566
+    },
+    "transactions": ["pickup", "delivery"],
+    "price": "$$",
+    "location": {
+      "address1": "6971 El Camino Real",
+      "address2": "Ste 201",
+      "address3": "",
+      "city": "Carlsbad",
+      "zip_code": "92009",
+      "country": "US",
+      "state": "CA",
+      "display_address": ["6971 El Camino Real", "Ste 201", "Carlsbad, CA 92009"]
+    },
+    "phone": "+17609311362",
+    "display_phone": "(760) 931-1362",
+    "distance": 2771.4634675882553
+  }, {
+    "id": "S4VR-89OVC5FEcKh9fu3xg",
+    "alias": "miss-kims-by-that-boy-good-oceanside",
+    "name": "Miss Kim's by That Boy Good",
+    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/ehPsdtO0TqF2qW90jeQurw/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/miss-kims-by-that-boy-good-oceanside?adjust_creative=CEHOX1F-5vd1oNht-mVSRg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=CEHOX1F-5vd1oNht-mVSRg",
+    "review_count": 1846,
+    "categories": [{
+      "alias": "bbq",
+      "title": "Barbeque"
+    }, {
+      "alias": "southern",
+      "title": "Southern"
+    }, {
+      "alias": "soulfood",
+      "title": "Soul Food"
+    }],
+    "rating": 4.5,
+    "coordinates": {
+      "latitude": 33.1960428,
+      "longitude": -117.3800083
+    },
+    "transactions": ["pickup"],
+    "price": "$$",
+    "location": {
+      "address1": "207 N Coast Hwy",
+      "address2": "",
+      "address3": "",
+      "city": "Oceanside",
+      "zip_code": "92054",
+      "country": "US",
+      "state": "CA",
+      "display_address": ["207 N Coast Hwy", "Oceanside, CA 92054"]
+    },
+    "phone": "+17604334227",
+    "display_phone": "(760) 433-4227",
+    "distance": 11836.976050853407
+  }, {
+    "id": "Eb1QTS6QcdpeaWydQO38rw",
+    "alias": "wokcano-carlsbad-carlsbad-2",
+    "name": "Wokcano Carlsbad",
+    "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/fUVsHRBQiN3VzbXiGpyr5A/o.jpg",
+    "is_closed": false,
+    "url": "https://www.yelp.com/biz/wokcano-carlsbad-carlsbad-2?adjust_creative=CEHOX1F-5vd1oNht-mVSRg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=CEHOX1F-5vd1oNht-mVSRg",
+    "review_count": 71,
+    "categories": [{
+      "alias": "chinese",
+      "title": "Chinese"
+    }, {
+      "alias": "sushi",
+      "title": "Sushi Bars"
+    }, {
+      "alias": "lounges",
+      "title": "Lounges"
+    }],
+    "rating": 4,
+    "coordinates": {
+      "latitude": 33.1782,
+      "longitude": -117.332446
+    },
+    "transactions": ["restaurant_reservation", "delivery", "pickup"],
+    "location": {
+      "address1": "2525 El Camino Real",
+      "address2": "Ste 200",
+      "address3": null,
+      "city": "Carlsbad",
+      "zip_code": "92008",
+      "country": "US",
+      "state": "CA",
+      "display_address": ["2525 El Camino Real", "Ste 200", "Carlsbad, CA 92008"]
+    },
+    "phone": "+17608289050",
+    "display_phone": "(760) 828-9050",
+    "distance": 7462.389732268757
+  }],
+  "total": 2900,
+  "region": {
+    "center": {
+      "longitude": -117.28866577148438,
+      "latitude": 33.12198326621279
+    }
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (yelpFakeApi);
+
+/***/ }),
+
+>>>>>>> bb88c767df9a289d00f00bf8f95576b8e484b956
 /***/ "./src/index.jsx":
 /*!***********************!*\
   !*** ./src/index.jsx ***!
@@ -15893,6 +16515,10 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 /***/ })
 
 /******/ });
+<<<<<<< HEAD
 //# sourceMappingURL=main.js.map
 =======
 >>>>>>> fd9f6b3626d381b0708416e51ae68bcf7a8c25f7
+=======
+//# sourceMappingURL=main.js.map
+>>>>>>> bb88c767df9a289d00f00bf8f95576b8e484b956
