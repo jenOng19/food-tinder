@@ -39,14 +39,63 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 10px;
 }
 
 .yelpMoreInfoExit {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 20px;
     right: 20px;
     width: 50px;
     height: 50px;
     background-color: white;
+    border-radius: 100px;
+    background-color: rgba(227, 227, 227, .8);
+}
+
+/* MODAL SECTION */
+
+.modalContainer {
+    text-align: center;
+    height: 100%;
+    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modalBody {
+    padding-top: 50px;
+    height: 50%;
+    position: relative;
+    background: rgb(253,132,29);
+    background: linear-gradient(0deg, rgba(247, 179, 76, .2) 1%, rgba(247, 201, 63, .5) 70%);
+}
+
+.modalName {
+    font-size: 1.5em;
+    font-family: 'Arimo', sans-serif;
+}
+
+.modalInfo {
+    margin: 20px;
+    font-size: 1.2rem;
+    font-family: 'Arimo', sans-serif;
+}
+
+.modalPicContainer {
+    height: 50%;
+    position: relative;
+}
+
+.slickPics {
+    height: 40vh;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.reviewCount {
+    color: rgb(114, 114, 114);
 }

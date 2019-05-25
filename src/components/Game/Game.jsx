@@ -5,6 +5,7 @@ import Header from '../layout';
 import FoodChoiceButtons from './food-buttons';
 import YelpContainer from "../yelp-container/yelp-container";
 import './game.css';
+import yelpFakeApi from '../../data/yelpdata';
 
 class Game extends Component {
     constructor(props) {
@@ -33,34 +34,44 @@ class Game extends Component {
     }
 
     yelpDate(location) {
-      axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/search?location=${location}`, {
-      headers: {
-        Authorization: `Bearer ${API_key}`
-      },
-      params: {
-        term : this.state.param,
-        limit: 8
-      }
+      // FETCH REQUEST
+      // axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://api.yelp.com/v3/businesses/search?location=${location}`, {
+      // headers: {
+      //   Authorization: `Bearer ${API_key}`
+      // },
+      // params: {
+      //   term : this.state.param,
+      //   limit: 8
+      // }
+      // })
+      // .then((res) => {
+      //   this.setState({
+      //     yelp: res.data.businesses,
+      //     round: this.state.round + 1,
+      //     gameStart: true
+      //   }, () => {
+      //     this.limit = this.state.yelp.length / 2
+      //   })
+      // })
+      // .catch((err) => {
+      //   this.setState({error: true})
+      //   console.log ('error')
+      // }) 
+      
+      // DUMMY DATA TEST
+      console.log( yelpFakeApi);
+      this.setState({
+        yelp: yelpFakeApi.businesses,
+        round: this.state.round + 1,
+        gameStart: true
+      }, () => {
+        this.limit = this.state.yelp.length / 2
       })
-      .then((res) => {
-        this.setState({
-          yelp: res.data.businesses,
-          round: this.state.round + 1,
-          gameStart: true
-        }, () => {
-          this.limit = this.state.yelp.length / 2
-        })
-      })
-      .catch((err) => {
-        this.setState({error: true})
-        console.log ('error')
-      })  
     } 
     
     handleRandomPick(){
       const yelpData = [...this.state.yelp];
       const bracket = yelpData.slice(0 , 2)
-      console.log('bracket', bracket)
       const pick=Math.floor(Math.random()* 2);
       this.clickHandler(bracket[pick].id)
     }
@@ -77,7 +88,6 @@ class Game extends Component {
     }
 
     nextRound() {
-      console.log( this.state )
       if ( this.state.bracket.length === this.limit ) 
         return ( this.state.bracket.length === 1 && this.state.yelp.length === 0) 
           ? this.setState( {
@@ -94,7 +104,6 @@ class Game extends Component {
     }
 
     renderYelpData() {
-      console.log('this.state.yelp :', this.state.yelp);
       const yelpData = [...this.state.yelp];
       const bracket = yelpData.slice(0 , 2)
       const yelpBracket = bracket.map( business => {
@@ -112,7 +121,6 @@ class Game extends Component {
     
     handleChange(event) {
       this.setState({ search: event.target.value });
-      console.log('this.state after change :', this.state);
     }
 
     handleSubmit(event) {

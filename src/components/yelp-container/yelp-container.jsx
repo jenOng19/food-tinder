@@ -40,7 +40,7 @@ class YelpContainer extends Component {
 					</div>
 
 					<div className={"yelpMoreInfo " + (this.state.showMoreInfo ? "showInfo" : null) }>
-						<div className="yelpMoreInfoExit" onClick={this.showMoreInfo}>X</div>
+						<div className="yelpMoreInfoExit" onClick={this.showMoreInfo}><i className="fas fa-angle-double-left fa-2x"></i></div>
 						<div className="yelpMoreInfoContent">
 							<YelpMoreInfo id={this.props.id} />
 						</div>
