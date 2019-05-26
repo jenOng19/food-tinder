@@ -1791,6 +1791,24 @@ exports.push([module.i, ".yelp-img{\n    height: 200px;\n    width: 200px;\n    
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./styles.css":
+/*!**********************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./styles.css ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ./node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico|Ramabhadra|Source+Serif+Pro&display=swap);", ""]);
+
+// Module
+exports.push([module.i, "/* font-family: 'Ramabhadra', sans-serif;\r\nfont-family: 'Pacifico', cursive;\r\nfont-family: 'Source Serif Pro', serif;\r\nfont-family: 'Dancing Script', cursive; */\r\n\r\nbody{\r\n    width: 100vw;\r\n    height: 100vh;\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n.landing__container {\r\n    height: 100vh;\r\n    width: 100vw;\r\n    display: flex;\r\n    flex-flow: column nowrap;\r\n    background-image: url(\"https://i.pinimg.com/originals/23/32/ec/2332ec1d6146620c4b2354148aca5a5f.jpg\");\r\n    background-size: auto 100%;\r\n}\r\n.header {\r\n    text-align: center;\r\n    height: 10vh;\r\n    background-color: beige;\r\n    font-family: 'Pacifico', cursive;\r\n    z-index: 10;\r\n}\r\n.header__title{\r\n    font-size: 2.5rem;\r\n    margin: 0;\r\n}\r\n.header__subtitle, .search__form{\r\n    font-family: 'Source Serif Pro', serif;\r\n}\r\n.header__subtitle {\r\n    font-size: 1.2rem;\r\n    background-color: beige;\r\n    height: 2.5rem;\r\n}\r\n.icon__container{\r\n    width: 80%;\r\n    height: 67%;\r\n    background-color: rgba(16, 29, 19, 0.425);\r\n    border-radius: 10px;\r\n    margin: auto;\r\n    display: flex;\r\n    flex-flow: row wrap;\r\n}\r\n.icon {\r\n    margin: auto;\r\n    height: 23%;\r\n    width: 42%;\r\n    background-color: rgba(247, 190, 67, 0.767);\r\n    border-radius: 10px;\r\n}\r\n.icon__img {\r\n    width: 80%;\r\n    height: 80%;\r\n    margin: auto;\r\n    margin-top: 7%;\r\n    margin-left: 10%;\r\n}\r\n.search__form {\r\n    margin-top: 15%;\r\n    font-size: 1.3rem;\r\n}\r\n.search {\r\n    color: white;\r\n    background-color: rgba(0, 0, 0, 0.384);\r\n}", ""]);
+
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/runtime/api.js":
 /*!*****************************************************!*\
   !*** ./node_modules/css-loader/dist/runtime/api.js ***!
@@ -15407,8 +15425,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _keys__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./keys */ "./src/components/game/keys.js");
 /* harmony import */ var _yelp_container_yelp_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../yelp-container/yelp-container */ "./src/components/yelp-container/yelp-container.jsx");
-/* harmony import */ var _game_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./game.css */ "./src/components/game/game.css");
-/* harmony import */ var _game_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_game_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _layout_landing__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../layout/landing */ "./src/components/layout/landing.jsx");
+/* harmony import */ var _layout_Header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../layout/Header */ "./src/components/layout/Header.jsx");
+/* harmony import */ var _game_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./game.css */ "./src/components/game/game.css");
+/* harmony import */ var _game_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_game_css__WEBPACK_IMPORTED_MODULE_6__);
+
+
 
 
 
@@ -15539,45 +15561,13 @@ class Game extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, !this.state.gameStart ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "search"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-      className: "search__form",
-      onSubmit: this.handleSubmit
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "search :", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-      className: "input__form",
-      type: "text",
-      value: this.state.search,
-      onChange: this.handleChange
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-      className: "error"
-    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "food__button"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      value: "korean",
-      className: "food1",
-      onClick: this.handleClick
-    }, "Korean Food"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      value: "mexican",
-      className: "food2",
-      onClick: this.handleClick
-    }, "Mexican Food"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      value: "american",
-      className: "food3",
-      onClick: this.handleClick
-    }, "American Food"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      value: "desert",
-      className: "desert",
-      onClick: this.handleClick
-    }, "Desert"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      value: "tea",
-      className: "desert",
-      onClick: this.handleClick
-    }, "Tea"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      value: "bar",
-      className: "drink",
-      onClick: this.handleClick
-    }, "Drink"))) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.yelp.length > 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Round ", this.state.round) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, !this.state.gameStart ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_layout_landing__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      gameStart: this.state.gameStart,
+      handleSubmit: this.handleSubmit,
+      search: this.state.search,
+      handleChange: this.handleChange,
+      handleClick: this.handleClick
+    }) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.yelp.length > 0 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Round ", this.state.round) : null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "section__container"
     }, this.state.yelp ? this.renderYelpData() : 'loading'), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: this.state.yelp.length >= 1 ? 'random-button' : 'hide',
@@ -15604,6 +15594,174 @@ let API_key = 'Y4noU6PPXhBRFrqRgmv-bnpO09SHmLhp9vUbmbrOJlak2Wy9MvFj7i3elJbFn4l9U
 //kate's :'Y4noU6PPXhBRFrqRgmv-bnpO09SHmLhp9vUbmbrOJlak2Wy9MvFj7i3elJbFn4l9UX82yo9E6iTIXUvLdIaEieEGW2Ok3RBuGip8HueeUcjX2Uw63k3nydopXDLHXHYx';
 
 /* harmony default export */ __webpack_exports__["default"] = (API_key);
+
+/***/ }),
+
+/***/ "./src/components/layout/Header.jsx":
+/*!******************************************!*\
+  !*** ./src/components/layout/Header.jsx ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function Header() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "header"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "header__title"
+  }, "Food Tinder"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "header__subtitle"
+  }, "The best way to choose foods near you"));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Header);
+
+/***/ }),
+
+/***/ "./src/components/layout/header.jsx":
+/*!******************************************!*\
+  !*** ./src/components/layout/header.jsx ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function Header() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "header"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "header__title"
+  }, "Food Tinder"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "header__subtitle"
+  }, "The best way to choose foods near you"));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Header);
+
+/***/ }),
+
+/***/ "./src/components/layout/landing.jsx":
+/*!*******************************************!*\
+  !*** ./src/components/layout/landing.jsx ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header */ "./src/components/layout/header.jsx");
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../styles.css */ "./styles.css");
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_css__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+function Landing(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "landing__container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_header__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "search"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    className: "search__form",
+    onSubmit: props.handleSubmit
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Location :", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "input__form",
+    type: "text",
+    value: props.search,
+    onChange: props.handleChange
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "error"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "icon__container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "icon",
+    onClick: props.handleClick
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "icon__img breakfast",
+    src: "https://image.flaticon.com/icons/svg/926/926255.svg",
+    alt: "breakfast",
+    value: "breakfast",
+    onClick: props.handleClick
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "icon",
+    onClick: props.handleClick
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "icon__img mexicianfood",
+    src: "https://image.flaticon.com/icons/svg/135/135590.svg",
+    alt: "mexicianfood",
+    value: "mexican",
+    onClick: props.handleClick
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "icon",
+    onClick: props.handleClick
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "icon__img noodles",
+    src: "https://image.flaticon.com/icons/svg/135/135658.svg",
+    alt: "noodles",
+    value: "noodles",
+    onClick: props.handleClick
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "icon",
+    onClick: props.handleClick
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "icon__img pizza",
+    src: "https://image.flaticon.com/icons/svg/1810/1810944.svg",
+    alt: "pizza",
+    value: "pizza",
+    onClick: props.handleClick
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "icon",
+    onClick: props.handleClick
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "icon__img hamburger",
+    src: "https://image.flaticon.com/icons/svg/878/878052.svg",
+    alt: "hamburger",
+    value: "hamburger",
+    onClick: props.handleClick
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "icon",
+    onClick: props.handleClick
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "icon__img coffee",
+    src: "https://image.flaticon.com/icons/svg/129/129501.svg",
+    alt: "coffee",
+    value: "coffee",
+    onClick: props.handleClick
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "icon",
+    onClick: props.handleClick
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "icon__img desertIcon",
+    src: "https://image.flaticon.com/icons/svg/1784/1784096.svg",
+    alt: "desert",
+    value: "desert",
+    onClick: props.handleClick
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "icon",
+    onClick: props.handleClick
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "icon__img bar",
+    src: "https://image.flaticon.com/icons/svg/1087/1087950.svg",
+    alt: "bar",
+    value: "bar",
+    onClick: props.handleClick
+  })))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Landing);
 
 /***/ }),
 
@@ -15817,6 +15975,36 @@ __webpack_require__.r(__webpack_exports__);
 
 
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_app__WEBPACK_IMPORTED_MODULE_2__["default"], null), document.getElementById('root'));
+
+/***/ }),
+
+/***/ "./styles.css":
+/*!********************!*\
+  !*** ./styles.css ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !./node_modules/css-loader/dist/cjs.js!./styles.css */ "./node_modules/css-loader/dist/cjs.js!./styles.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ./node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ })
 

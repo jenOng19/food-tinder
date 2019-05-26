@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico|Ramabhadra|Source+Serif+Pro&display=swap');
+/* font-family: 'Ramabhadra', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Source Serif Pro', serif;
+font-family: 'Dancing Script', cursive; */
+
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.landing__container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: column nowrap;
+    background-image: url("https://i.pinimg.com/originals/23/32/ec/2332ec1d6146620c4b2354148aca5a5f.jpg");
+    background-size: auto 100%;
+}
+.header {
+    text-align: center;
+    height: 10vh;
+    background-color: beige;
+    font-family: 'Pacifico', cursive;
+    z-index: 10;
+}
+.header__title{
+    font-size: 2.5rem;
+    margin: 0;
+}
+.header__subtitle, .search__form{
+    font-family: 'Source Serif Pro', serif;
+}
+.header__subtitle {
+    font-size: 1.2rem;
+    background-color: beige;
+    height: 2.5rem;
+}
+.icon__container{
+    width: 80%;
+    height: 67%;
+    background-color: rgba(16, 29, 19, 0.425);
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+.icon {
+    margin: auto;
+    height: 23%;
+    width: 42%;
+    background-color: rgba(247, 190, 67, 0.767);
+    border-radius: 10px;
+}
+.icon__img {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    margin-top: 7%;
+    margin-left: 10%;
+}
+.search__form {
+    margin-top: 15%;
+    font-size: 1.3rem;
+}
+.search {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.384);
+}

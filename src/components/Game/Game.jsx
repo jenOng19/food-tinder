@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import axios from "axios";
 import API_key from "./keys";
 import YelpContainer from "../yelp-container/yelp-container";
+import Landing from '../layout/landing';
+import Header from '../layout/Header';
 import './game.css';
 
 class Game extends Component {
@@ -124,31 +126,16 @@ class Game extends Component {
 
     render() {
       return (
-        <div>
-          {!this.state.gameStart ? <div className="search">
-            <form className="search__form" onSubmit={this.handleSubmit}>
-              <label>
-                search :
-                <input className = "input__form" type="text" value={this.state.search} onChange={this.handleChange} /><p className="error"></p>
-                <br/>
-            </label> 
-            </form>  
-            <div className="food__button">            
-              <button value="korean" className="food1" onClick={this.handleClick}>Korean Food</button>
-              <button value="mexican" className="food2" onClick={this.handleClick}>Mexican Food</button>
-              <button value="american" className="food3" onClick={this.handleClick}>American Food</button>
-              <button value="desert" className="desert" onClick={this.handleClick}>Desert</button>
-              <button value="tea" className="desert" onClick={this.handleClick}>Tea</button>
-              <button value="bar" className="drink" onClick={this.handleClick}>Drink</button>
-            </div>
-          </div> : null}
+        <React.Fragment>
+          {!this.state.gameStart ? <Landing gameStart={this.state.gameStart} handleSubmit={this.handleSubmit} search={this.state.search} handleChange={this.handleChange} handleClick={this.handleClick}/>
+          : null }
           <div>
             { this.state.yelp.length > 0 ? <h1>Round { this.state.round }</h1> : null}
             <div className="section__container">{this.state.yelp ? this.renderYelpData():'loading'}</div>
             <button className={this.state.yelp.length>=1?'random-button':'hide'} onClick={this.handleRandomPick}>Pick for Me!</button>
             { this.state.bracket.length === 1 && <button>Reset</button>}
           </div>
-        </div>
+        </React.Fragment>
         
       )
     }
